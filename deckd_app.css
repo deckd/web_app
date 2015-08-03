@@ -1,1 +1,22 @@
-/* CSS declarations go here */
+html, body {
+  height: 100%;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+
+.slide {
+  margin: 1em;
+  overflow: hidden;
+  height: inherit;
+  width: 92%;
+  font-size: 3.5em;
+  border:none;
+  outline: none;
+  text-align: left;
+}

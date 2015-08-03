@@ -3,11 +3,16 @@
 </head>
 
 <body>
-  <form class="slide-form">
-      <textarea data-persist="garlic" class="slide" placeholder="Write something..."></textarea>
-      <p>
-        <input type="reset" name="reset" value="Reset">
-      </p>
-  </form>
-
+  <div class="viewer full-width full-height">
+    <form class="display-table full-height">
+      <div class="table-row  full-width full-height">
+        <div class="table-cell full-width full-height">
+          <textarea data-persist="garlic" class="slide" placeholder="Write something..."></textarea>
+        </div>
+        <div class="table-cell sidebar-column vertical-top">
+          <button type="reset" name="reset" class="icon-button large-button"><i class="fa fa-trash-o fa-2x"></i></button>
+        </div>
+      </div>
+    </form>
+  </div>
 </body>

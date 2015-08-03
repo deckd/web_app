@@ -1,0 +1,85 @@
+@import "variables"
+
+html, body
+  height: 100%
+  box-sizing: border-box
+
+*, *:before, *:after
+  box-sizing: inherit
+
+body
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif
+  overflow:hidden
+  // text-align: center
+
+.slide
+  overflow: auto
+  height: inherit
+  width:100%
+  font-size: 3.5em
+  border:none
+  outline: none
+  text-align: left
+  padding: 0
+  padding-right: 1em
+  padding-left: .5em
+  margin: 0
+
+.viewer
+  padding: 1.5em
+
+.sidebar-column
+  max-width: 3em
+
+// BUTTONS
+button
+  &.icon-button
+    background-color: transparent
+    border:none
+    color: $light-gray
+
+    .fa
+      color: $light-gray
+
+
+    &:focus
+     outline: 0
+
+
+    i:hover
+      color: $steel-gray
+  &.large-button
+    font-size: 1.5em;
+
+
+  &.unstyled
+    background-color: transparent
+    border:none
+
+    &:focus
+     outline: 0
+
+// LAYOUT
+.display-table
+  display: table
+
+  .table-row
+    display: table-row
+
+    .table-cell
+      display: table-cell
+
+      &.vertical-middle
+        vertical-align:middle
+
+      &.vertical-top
+        vertical-align: top
+
+.full-height
+  height: 100%
+
+.full-width
+  width: 100%
+
+.overflow-y-hidden
+  overflow-y: hidden

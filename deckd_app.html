@@ -1,6 +1,10 @@
 <body>
   <div class="viewer full-width full-height">
-  {{> slide}}
+    {{#if viewingSlide}}
+      {{> viewSlide}}
+    {{else}}
+      {{> editSlide}}
+    {{/if}}
   </div>
 </body>
 

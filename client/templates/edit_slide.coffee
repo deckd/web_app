@@ -1,8 +1,8 @@
-Template.slide.onCreated ->
+Template.editSlide.onCreated ->
   if (document.title == null || document.title == "")
     document.title = "Untitled"
 
-Template.slide.onRendered ->
+Template.editSlide.onRendered ->
   $('.slide').focus()
 # Template.slide.helpers
 #   return Session.get("slideContent")
@@ -11,7 +11,7 @@ Template.slide.onRendered ->
 #   slideContent: ->
 #     return Session.get("slideContent")
 
-Template.slide.events
+Template.editSlide.events
   "input .get-title": (e) ->
     e.preventDefault()
 
@@ -26,5 +26,10 @@ Template.slide.events
       document.title = docTitle
       # Session.setPersistent("docTitle", docTitle)
       # Session.setPersistent("slideContent", rawContent)
+
   "click .clear-content": ->
     document.title = "Untitled"
+
+  "blur .slide": (e) ->
+    Session.setPersistent "slideContent", e.target.value
+    Session.set "viewingSlide", true

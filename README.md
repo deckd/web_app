@@ -7,7 +7,6 @@
 
 ## Roadmap
 
-- Base window title on first line of "slide" allowing for opening multiple slides and using as a quick and dirty deck.
 - Markup support
 - Footer with app info
 - UI tweaks: clear deck confirmation, hide clear button unless slide has content.

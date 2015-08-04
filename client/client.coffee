@@ -1,4 +1,7 @@
 Meteor.startup ->
-  # Session.setDefault "WindowTitle", "Untitled"
-  # document.title = Session.get "WindowTitle"
-  document.title = "Untitled"
+  if document.title == ""
+    document.title = "Untitled"
+
+  console.log(document.title)
+
+  # document.title = "Untitled"

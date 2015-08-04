@@ -2,6 +2,8 @@ Template.slide.onCreated ->
   if (document.title == null || document.title == "")
     document.title = "Untitled"
 
+Template.slide.onRendered ->
+  $('.slide').focus()
 # Template.slide.helpers
 #   return Session.get("slideContent")
 

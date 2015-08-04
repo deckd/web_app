@@ -8,15 +8,21 @@ html, body
   box-sizing: inherit
 
 body
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif
+  font-family: $helvetica-family
+  background-color: $app-bg-color
   overflow:hidden
-  // text-align: center
 
 .slide
   overflow: auto
   height: inherit
   width:100%
   font-size: 3.5em
+  // margin: 2px;
+  border: 1px solid #DEDEDE
+
+  -webkit-box-shadow: 2px 2px 2px 0px rgba(179,179,179,1)
+  -moz-box-shadow: 2px 2px 2px 0px rgba(179,179,179,1)
+  box-shadow: 2px 2px 2px 0px rgba(179,179,179,1)
 
   text-align: left
   padding: 0
@@ -24,14 +30,12 @@ body
   padding-left: .25em
   margin: 0
   &.edit-slide
-    border:none
+    // border:none
     outline: none
-
-
 
 .viewer
   padding: 1em
-  padding-right: .5em;
+  padding-right: .5em
 
 .sidebar-column
   max-width: 3em

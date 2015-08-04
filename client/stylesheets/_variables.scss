@@ -6,6 +6,7 @@ $container-margin:                     1em;
 
 // TEXT
 // _________________________________________
+$helvetica-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $base-font-size:                       14px;
 $base-line-height:                       1.4;
 $small-text:                            .9em;
@@ -20,7 +21,7 @@ $editor-line-height:                       2.2;
 // COLORS
 // ____________________________________________
 $base-color:                               #222;
-$app-background-color:                  #ffffff;
+$app-bg-color:                          #e6e6e6;
 $off-black:                             #333333;
 $steel-gray:                            #666666;
 $gray:                                  #B8B8B8;

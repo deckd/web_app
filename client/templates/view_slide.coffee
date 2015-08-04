@@ -3,9 +3,6 @@ Template.viewSlide.onRendered ->
   if (Session.get("docTitle"))
     document.title = Session.get("docTitle")
 
-# Template.slide.helpers
-#   return Session.get("slideContent")
-
 Template.viewSlide.helpers
   slideContent: ->
     return Session.get("slideContent")

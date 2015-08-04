@@ -6,12 +6,7 @@ Template.editSlide.onRendered ->
 
   $('.slide').focus()
   $('.slide').val(Session.get('slideContent'))
-# Template.slide.helpers
-#   return Session.get("slideContent")
 
-# Template.slide.helpers
-#   slideContent: ->
-#     return Session.get("slideContent")
 
 Template.editSlide.events
   "input .get-title": (e) ->
@@ -27,11 +22,8 @@ Template.editSlide.events
       docTitle = contentLines[0].substring(0, 64)
       document.title = docTitle
       Session.setPersistent("docTitle", docTitle)
-      # Session.setPersistent("slideContent", rawContent)
 
   "click .clear-content": ->
-    # $('.slide').val("")
-    # Session.set "slideContent", ""
     document.title = "Untitled"
 
   "click .done-editing": (e) ->

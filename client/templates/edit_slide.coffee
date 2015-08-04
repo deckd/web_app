@@ -3,8 +3,7 @@ Template.editSlide.onRendered ->
     document.title = "Untitled"
   else
     document.title = Session.get("docTitle")
-    console.log("Rendered: #{Session.get("slideContent")}")
-      
+
   $('.slide').focus()
   $('.slide').val(Session.get('slideContent'))
 # Template.slide.helpers
@@ -31,9 +30,17 @@ Template.editSlide.events
       # Session.setPersistent("slideContent", rawContent)
 
   "click .clear-content": ->
+    # $('.slide').val("")
+    # Session.set "slideContent", ""
     document.title = "Untitled"
+
+  "click .done-editing": (e) ->
+    e.preventDefault()
+    slideContent = $('.slide').val()
+    console.log("Done: #{ slideContent }")
+    Session.setPersistent "slideContent", slideContent
+    Session.set "viewingSlide", true
+
 
   "blur .slide": (e) ->
     Session.setPersistent "slideContent", e.target.value
-    console.log(Session.get("slideContent"))
-    Session.set "viewingSlide", true

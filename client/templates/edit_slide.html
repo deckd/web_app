@@ -1,8 +1,8 @@
 <template name="editSlide">
   <form class="content-form display-table full-height">
-    <div class="table-row  full-width full-height">
+    <div class="table-row full-width full-height">
       <div class="table-cell full-width full-height">
-        <textarea class="slide get-title" placeholder="Write something..." data-persist="garlic"></textarea>
+        <textarea class="slide edit-slide get-title" placeholder="Write something..." data-persist="garlic">{{slideContent}}</textarea>
       </div>
       <div class="table-cell sidebar-column vertical-bottom">
         <button type="reset" class="icon-button medium-button clear-content" title="Clear page content" alt="Clear page content"><i class="fa fa-trash-o fa-2x"></i></button>

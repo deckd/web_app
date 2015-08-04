@@ -1,4 +1,4 @@
-Template.windowTitle.helpers {
-  slideFirstLine: ->
-    return Session.get "WindowTitle"
-}
+# Template.windowTitle.helpers {
+#   slideFirstLine: ->
+#     return Session.get "WindowTitle"
+# }

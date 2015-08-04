@@ -17,13 +17,17 @@ body
   height: inherit
   width:100%
   font-size: 3.5em
-  border:none
-  outline: none
+
   text-align: left
   padding: 0
   padding-right: 1em
   padding-left: .25em
   margin: 0
+  &.edit-slide
+    border:none
+    outline: none
+
+
 
 .viewer
   padding: 1em
@@ -86,3 +90,7 @@ button
 
 .overflow-y-hidden
   overflow-y: hidden
+
+// HELPERS
+.pointer-cursor:hover
+  cursor: pointer

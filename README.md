@@ -8,6 +8,6 @@
 
 ## Roadmap
 
-- Markup support
 - Footer with app info
-- UI tweaks: clear deck confirmation, hide clear button unless slide has content.
+- Basic look and feel
+- Multiple slides

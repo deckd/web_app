@@ -1,38 +1,14 @@
+@import "normalize"
 @import "variables"
 @import "helpers"
+@import "base"
+@import "editor"
 
-html, body
-  height: 100%
-  box-sizing: border-box
-
-*, *:before, *:after
-  box-sizing: inherit
-
-body
-  font-family: $helvetica-family
-  background-color: $app-bg-color
-  overflow:hidden
-
-.slide
-  overflow: auto
-  height: inherit
-  width:100%
-  font-size: 3.5em
-  // margin: 2px;
-  border: 1px solid #DEDEDE
-
-  -webkit-box-shadow: 2px 2px 2px 0px rgba(179,179,179,1)
-  -moz-box-shadow: 2px 2px 2px 0px rgba(179,179,179,1)
-  box-shadow: 2px 2px 2px 0px rgba(179,179,179,1)
-
-  text-align: left
-  padding: 0
-  padding-right: 1em
-  padding-left: .25em
+.brand 
+  font-family: $courgette-family
+  font-size: 2.25em
   margin: 0
-  &.edit-slide
-    // border:none
-    outline: none
+  color: $gray
 
 .viewer
   padding: 1em

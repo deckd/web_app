@@ -37,6 +37,7 @@ mquandalle:jade@0.4.3
 mquandalle:jade-compiler@0.4.3
 mrt:garlic@0.1.0
 observe-sequence@1.0.6
+okgrow:analytics@0.3.0
 ordered-dict@1.0.3
 random@1.0.3
 reactive-dict@1.1.0

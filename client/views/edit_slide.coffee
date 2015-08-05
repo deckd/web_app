@@ -1,4 +1,4 @@
-Template.editSlide.onRendered ->
+Template.editor.onRendered ->
   if (!Session.get("docTitle"))
     document.title = "Untitled"
   else
@@ -14,7 +14,7 @@ Template.editSlide.onRendered ->
   $('.slide').val(Session.get('slideContent'))
 
 
-Template.editSlide.events
+Template.editor.events
   "input .get-title": (e) ->
     e.preventDefault()
 
@@ -32,7 +32,7 @@ Template.editSlide.events
   "click .clear-content": ->
     document.title = "Untitled"
 
-  "click .done-editing": (e) ->
+  "click .view-deck": (e) ->
     e.preventDefault()
     slideContent = $('.slide').val()
     console.log("Done: #{ slideContent }")

@@ -12,3 +12,57 @@
     </div>
   </div>
 </template>
+
+<template name="viewer">
+
+<!-- <form class="full-height full-width full-height"> -->
+
+<div class="display-table full-width full-height">
+
+  <div class="table-row full-width full-height app-content-row">
+
+    <div class="table-cell full-width full-height">
+        <div class="slide edit-content slide-content pointer-cursor">
+          {{#markdown}}{{slideContent}}{{/markdown}}
+        </div>
+    </div>
+
+    <div class="table-cell full-width vertical-top align-center">
+      <div class="display-table app-controls full-height">
+        <div class="table-row">
+          <div class="table-cell vertical-top icon-cell">
+            <button type="reset" class="icon-button medium-button view-deck" title="Present your deck" alt="Present your deck"><i class="fa fa-youtube-play fa-3x"></i></button>
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="table-cell vertical-top">
+           <button type="reset" class="icon-button medium-button clear-content" title="Full screen view" alt="Full screen view"><i class="fa fa-arrows-alt fa-2x"></i></button>
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="table-cell vertical-bottom bottom-cell">
+           <button type="reset" class="icon-button medium-button clear-content" title="Clear page content" alt="Clear page content"><i class="fa fa-trash-o fa-2x"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="table-row full-width">
+    <div class="table-cell full-width">
+      <div class="display-table full-width editor-footer">
+        <div class="table-cell brand">
+          Deckd
+        </div>
+        <div class="table-cell app-info">
+          &nbsp;
+        </div>
+      </div>
+    </div>
+    <div class="table-cell">
+      &nbsp;
+    </div>
+  </div>
+</div>
+<!-- </form> -->
+</template>
+

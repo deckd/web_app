@@ -30,6 +30,7 @@ Template.editor.events
       Session.setPersistent("docTitle", docTitle)
 
   "click .clear-content": ->
+    Session.set "slideContent", ""
     document.title = "Untitled"
 
   "click .view-deck": (e) ->
@@ -42,3 +43,4 @@ Template.editor.events
 
   "blur .slide": (e) ->
     Session.setPersistent "slideContent", e.target.value
+    Session.set "viewingSlide", true

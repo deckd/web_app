@@ -1,24 +1,24 @@
 <template name="editor">
 
-<form class="full-height full-width">
+<form class="full-height full-width full-height">
 
-<div class="display-table full-height full-width">
+<div class="display-table full-width full-height">
 
-  <div class="table-row full-width full-height">
+  <div class="table-row full-width full-height app-content-row">
 
     <div class="table-cell full-width full-height">
        <textarea name="slide" class="slide edit-slide get-title" placeholder="Write something..." data-persist="garlic">{{slideContent}}</textarea>
     </div>
 
-    <div class="table-cell full-width full-height vertical-top align-center">
-      <div class="display-table full-height">
+    <div class="table-cell full-width vertical-top align-center">
+      <div class="display-table app-controls full-height">
         <div class="table-row">
           <div class="table-cell vertical-top">
            <button type="reset" class="icon-button medium-button clear-content" title="Present your deck" alt="Present your deck"><i class="fa fa-arrows-alt fa-2x"></i></button>
           </div>
         </div>
         <div class="table-row">
-          <div class="table-cell vertical-bottom">
+          <div class="table-cell vertical-bottom bottom-cell">
            <button type="reset" class="icon-button medium-button clear-content" title="Clear page content" alt="Clear page content"><i class="fa fa-trash-o fa-2x"></i></button>
           </div>
         </div>
@@ -29,15 +29,14 @@
     <div class="table-cell full-width">
       <div class="display-table full-width editor-footer">
         <div class="table-cell brand">
-          <p>Deckd</p>
+          Deckd
         </div>
         <div class="table-cell app-info">
-          Help
+          &nbsp;
         </div>
       </div>
-       
     </div>
-    <div class="table-cell full-width full-height">
+    <div class="table-cell">
       &nbsp;
     </div>
   </div>

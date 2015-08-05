@@ -1,0 +1,49 @@
+<template name="editSlide">
+<form class="full-height full-width">
+
+<!-- OUTER TABLE -->
+<div class="display-table full-height full-width">
+
+<!-- FIRST ROW -->
+  <div class="table-row full-width full-height">
+
+  <!-- FIRST COLUMN -->
+    <div class="table-cell full-width full-height">
+       <textarea name="slide" class="slide edit-slide get-title" placeholder="Write something..." data-persist="garlic">{{slideContent}}</textarea>
+    </div>
+
+    <!-- SECOND COLUMN -->
+    <div class="table-cell full-width full-height vertical-top align-center">
+      <div class="display-table full-height">
+        <div class="table-row">
+          <div class="table-cell vertical-top">
+           <button type="reset" class="icon-button medium-button clear-content" title="Present your deck" alt="Present your deck"><i class="fa fa-arrows-alt fa-2x"></i></button>
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="table-cell vertical-bottom">
+           <button type="reset" class="icon-button medium-button clear-content" title="Clear page content" alt="Clear page content"><i class="fa fa-trash-o fa-2x"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="table-row full-width full-height">
+    <div class="table-cell full-width full-height">
+      <div class="display-table full-width">
+        <div class="table-cell">
+          Deckd
+        </div>
+        <div class="table-cell">
+          Help
+        </div>
+      </div>
+       
+    </div>
+    <div class="table-cell full-width full-height">
+      &nbsp;
+    </div>
+  </div>
+</div>
+</form>
+</template>

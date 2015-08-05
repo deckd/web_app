@@ -4,7 +4,7 @@ Template.editSlide.onRendered ->
   else
     document.title = Session.get("docTitle")
 
-  $('.auto-size').autosize()
+  # $('.auto-size').autosize()
   # , $(this.firstNode));
   # $slide.autosize()
 

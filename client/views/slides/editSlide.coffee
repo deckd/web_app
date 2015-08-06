@@ -1,6 +1,7 @@
 Template.editSlide.onRendered ->
   $('.slide').focus()
   $('.slide').val(Session.get('slideContent'))
+  dkHelpers.previewTimer.start()
 
 Template.editSlide.helpers
   slideContent: ->
@@ -24,3 +25,14 @@ Template.editSlide.events
   "blur .preview-on-blur": (e) ->
     Session.setPersistent "slideContent", e.target.value
     Session.set "editingSlide", false
+
+  "input .auto-preview": (e) ->
+    Session.setPersistent "slideContent", e.target.value
+    dkHelpers.previewTimer.reset()
+    dkHelpers.previewTimer.start()
+
+    # need to get the content right when the timer ends
+    
+    # reset the timer
+    # wait 3s
+    # set editingSlide to false

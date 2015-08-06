@@ -19,16 +19,3 @@
   {{/unless}}
 </div>
 </template>
-
-
-<template name="temp">
-  <div class="table-cell full-width full-height">
-      {{#if editingSlide}}
-  <textarea name="slide" class="full-height get-title" placeholder="Write something..." data-persist="garlic">{{slideContent}}</textarea>
-      {{else}}
-         <div class="slide edit-content pointer-cursor full-height">
-    {{#markdown}}{{slideContent}}{{/markdown}}
-  </div>
-       {{/if}}
-    </div>
-</template>

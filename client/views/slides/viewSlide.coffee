@@ -1,13 +1,13 @@
-Template.viewer.onRendered ->
+Template.viewSlide.onRendered ->
 
   if (Session.get("docTitle"))
     document.title = Session.get("docTitle")
 
-Template.viewer.helpers
+Template.viewSlide.helpers
   slideContent: ->
     return Session.get("slideContent")
 
-Template.viewer.events
+Template.viewSlide.events
   "click .edit-content": (e) ->
     e.preventDefault()
-    Session.set "viewingSlide", false
+    Session.set "editingSlide", true

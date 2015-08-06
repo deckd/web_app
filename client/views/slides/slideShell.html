@@ -1,0 +1,19 @@
+<template name="slideShell">
+<div class="display-table full-width full-height">
+  <div class="table-row full-width full-height app-content-row">
+    <div class="table-cell full-width full-height">
+      {{#if editingSlide}}
+        {{> editSlide}}
+      {{else}}
+        {{> viewSlide}}
+       {{/if}}
+    </div>
+    <div class="table-cell full-width vertical-top align-center">
+    {{> slideControls}}
+    </div>
+  </div>
+  {{#if editingSlide}}
+    {{> slideFooter}}
+  {{/if}}
+</div>
+</template>

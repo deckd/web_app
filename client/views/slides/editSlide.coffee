@@ -21,6 +21,6 @@ Template.editSlide.events
       document.title = docTitle
       Session.setPersistent("docTitle", docTitle)
 
-  "blur .slide": (e) ->
+  "blur .preview-on-blur": (e) ->
     Session.setPersistent "slideContent", e.target.value
     Session.set "editingSlide", false

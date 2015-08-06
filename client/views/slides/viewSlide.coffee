@@ -3,6 +3,6 @@ Template.viewSlide.helpers
     Session.get "slideContent"
 
 Template.viewSlide.events
-  "click .edit-content": (e) ->
+  "click .click-to-edit": (e) ->
     e.preventDefault()
     Session.set "editingSlide", true

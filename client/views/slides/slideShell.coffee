@@ -1,4 +1,6 @@
 Template.slideShell.onRendered ->
+  # Session.set "editingSlide", true
+  
   if (!Session.get("docTitle"))
     document.title = "Untitled"
   else

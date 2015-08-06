@@ -16,7 +16,7 @@ Template.slideControls.events
 
   "click .clear-content": ->
     e.preventDefault()
-    Session.set "slideContent", ""
+    Session.setPersistent "slideContent", ""
     document.title = "Untitled"
 
   "click .toggle-fullscreen": (e) ->

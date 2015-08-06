@@ -2,18 +2,31 @@
 <div class="display-table full-width full-height">
   <div class="table-row full-width full-height app-content-row">
     <div class="table-cell full-width full-height">
-      {{#if editingSlide}}
-        {{> editSlide}}
-      {{else}}
-        {{> viewSlide}}
-       {{/if}}
+    {{#if editingSlide}}
+    {{> editSlide}}
+   {{else}}
+     {{> viewSlide}}
+   {{/if}}
     </div>
-    <div class="table-cell full-width vertical-top align-center">
+    <div class="table-cell vertical-top align-center">
     {{> slideControls}}
     </div>
   </div>
-  {{#if editingSlide}}
+  {{#unless fullScreenActive}}
     {{> slideFooter}}
-  {{/if}}
+  {{/unless}}
 </div>
+</template>
+
+
+<template name="temp">
+  <div class="table-cell full-width full-height">
+      {{#if editingSlide}}
+  <textarea name="slide" class="full-height get-title" placeholder="Write something..." data-persist="garlic">{{slideContent}}</textarea>
+      {{else}}
+         <div class="slide edit-content pointer-cursor full-height">
+    {{#markdown}}{{slideContent}}{{/markdown}}
+  </div>
+       {{/if}}
+    </div>
 </template>

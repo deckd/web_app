@@ -8,3 +8,6 @@ Template.slideShell.onRendered ->
 Template.slideShell.helpers
   editingSlide: ->
     Session.get "editingSlide"
+
+  fullScreenActive: ->
+    Session.get "fullScreenActive"

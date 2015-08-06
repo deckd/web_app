@@ -6,14 +6,12 @@
 
 meteor-platform
 coffeescript
-mrt:garlic
 jquery
 fortawesome:fontawesome
 fourseven:scss
 juliancwirko:s-alert
-u2622:persistent-session
 markdown
-copleykj:jquery-autosize
 mquandalle:jade
 okgrow:analytics
 flowkey:bigscreen
+mrt:garlic

@@ -23,4 +23,4 @@ Template.editSlide.events
 
   "blur .slide": (e) ->
     Session.setPersistent "slideContent", e.target.value
-    Session.set "viewingSlide", true
+    Session.set "editingSlide", false

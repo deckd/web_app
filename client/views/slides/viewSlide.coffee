@@ -1,6 +1,6 @@
 Template.viewSlide.helpers
   slideContent: ->
-    return Session.get("slideContent")
+    Session.get "slideContent"
 
 Template.viewSlide.events
   "click .edit-content": (e) ->

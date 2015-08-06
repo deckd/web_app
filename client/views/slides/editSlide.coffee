@@ -1,11 +1,10 @@
 Template.editSlide.onRendered ->
-  if (!Session.get("docTitle"))
-    document.title = "Untitled"
-  else
-    document.title = Session.get("docTitle")
-
   $('.slide').focus()
   $('.slide').val(Session.get('slideContent'))
+
+Template.editSlide.helpers
+  slideContent: ->
+    Session.get "slideContent"
 
 Template.editSlide.events
   "input .get-title": (e) ->

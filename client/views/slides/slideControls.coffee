@@ -14,10 +14,3 @@ Template.slideControls.events
   "click .clear-content": ->
     Session.set "slideContent", ""
     document.title = "Untitled"
-
-  # "click .view-deck": (e) ->
-  #   e.preventDefault()
-  #   slideContent = $('.slide').val()
-  #   console.log("Done: #{ slideContent }")
-  #   Session.setPersistent "slideContent", slideContent
-  #   Session.set "viewingSlide", true

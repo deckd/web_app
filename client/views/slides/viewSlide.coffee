@@ -1,8 +1,3 @@
-Template.viewSlide.onRendered ->
-
-  if (Session.get("docTitle"))
-    document.title = Session.get("docTitle")
-
 Template.viewSlide.helpers
   slideContent: ->
     return Session.get("slideContent")

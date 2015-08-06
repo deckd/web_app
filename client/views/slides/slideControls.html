@@ -1,29 +1,20 @@
 <template name="slideControls">
       <div class="display-table app-controls full-height">
         <div class="table-row">
-          <div class="table-cell vertical-top icon-cell">
-           {{#if editingSlide}}
-            <button type="button" class="icon-button medium-button view-slide" title="Present your deck" alt="Present your deck"><i class="fa fa-youtube-play fa-3x"></i></button>
-            {{else}}
-            <button type="button" class="icon-button medium-button edit-slide" title="Edit this deck" alt="Edit this deck"><i class="fa fa-pencil fa-2x"></i></button>
-            {{/if}}
-          </div>
-        </div>
-        <div class="table-row">
           <div class="table-cell vertical-top">
           {{#if fullScreenActive}}
              <button type="button" class="icon-button medium-button toggle-fullscreen" title="Exit full screen" alt="Exit full screen"><i class="fa fa-times fa-2x"></i></button>
           {{else}}
-             <button type="button" class="icon-button medium-button toggle-fullscreen" title="Full screen view" alt="Full screen view"><i class="fa fa-arrows-alt fa-2x"></i></button>
+             <button type="button" class="icon-button medium-button toggle-fullscreen" title="Start Presentation" alt="Start Presentation"><i class="fa fa-youtube-play fa-3x"></i></button>
            {{/if}}
           </div>
         </div>
-         {{#if editingSlide}}
+         {{#unless fullScreenActive}}
         <div class="table-row">
           <div class="table-cell vertical-bottom bottom-cell">
            <button type="button" class="icon-button medium-button clear-content" title="Clear page content" alt="Clear page content"><i class="fa fa-trash-o fa-2x"></i></button>
           </div>
         </div>
-        {{/if}}
+        {{/unless}}
       </div>
 </template>

@@ -5,12 +5,17 @@ Template.editSlide.onRendered ->
 Template.editSlide.helpers
 
   docTitle: ->
-    document.title = Session.get "docTitle"
+    if (Session.get("docTitle") != "")
+      document.title = Session.get "docTitle"
+    else
+      document.title = "Untitled"  
 
 Template.editSlide.events
 
   "input .get-content": (e) ->
-    Session.setPersistent "slideContent", e.target.value
+    content = e.target.value
+    Session.setPersistent "slideContent", content
+    DkHelpers.setDocTitle(content)
     #TODO: call get content here
 
 

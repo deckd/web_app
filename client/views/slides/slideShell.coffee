@@ -1,10 +1,8 @@
 Template.slideShell.onRendered ->
-  # Session.set "editingSlide", true
-  
-  if (!Session.get("docTitle"))
-    document.title = "Untitled"
-  else
-    document.title = Session.get("docTitle")
+  if (Session.get("docTitle") != "")
+    Session.setPersistent("docTitle", DkConstants.TITLE_BLURB)
+
+  document.title = Session.get("docTitle")
 
 
 Template.slideShell.helpers

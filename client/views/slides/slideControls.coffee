@@ -13,7 +13,7 @@ Template.slideControls.events
   "click .view-slide": (e) ->
     e.preventDefault()
     Session.set "editingSlide", false
-
+ 
   "click .clear-content": (e) ->
     e.preventDefault()
     $('.destroy-garlic').garlic('destroy')

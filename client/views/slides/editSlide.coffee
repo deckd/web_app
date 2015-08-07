@@ -4,11 +4,11 @@ Template.editSlide.onRendered ->
 
 Template.editSlide.helpers
 
-  docTitle: ->
-    if (Session.get("docTitle") != "")
-      document.title = Session.get "docTitle"
-    else
-      document.title = "Untitled"  
+  # docTitle: ->
+  #   if (Session.get("docTitle") != "")
+  #     document.title = Session.get "docTitle"
+  #   else
+  #     document.title = "Untitled"  
 
 Template.editSlide.events
 

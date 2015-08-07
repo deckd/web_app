@@ -5,8 +5,10 @@
         <div class="table-cell brand">
           Deckd
         </div>
-        <div class="table-cell app-info">
-          &nbsp;
+        <div class="table-cell vertical-middle align-right">
+          {{#if hasContent}}
+           <button type="button" class="icon-button medium-button clear-content-btn" title="Clear page content" alt="Clear page content"><i class="fa fa-trash-o fa-2x"></i></button>
+           {{/if}}
         </div>
       </div>
     </div>

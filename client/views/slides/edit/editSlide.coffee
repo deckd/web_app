@@ -1,9 +1,13 @@
 Template.editSlide.onRendered ->
+  console.log("render edit slide: #{Session.get("slideContent")}")
   $('.slide').focus()
-  $('.slide').val(Session.get('slideContent'))
+
+
 
 Template.editSlide.helpers
-
+    slideContent: ->
+      Session.get "slideContent"
+      
   # docTitle: ->
   #   if (Session.get("docTitle") != "")
   #     document.title = Session.get "docTitle"
@@ -18,13 +22,13 @@ Template.editSlide.events
     DkHelpers.setDocTitle(content)
 
 
-  "blur .preview-on-blur": (e) ->
-    e.stopPropagation()
-    content = e.target.value
-    Session.setPersistent "slideContent", content
+  # "blur .preview-on-blur": (e) ->
+  #   e.stopPropagation()
+  #   content = e.target.value
+  #   Session.setPersistent "slideContent", content
 
-    if(content != "")
-      Session.set "editingSlide", false
+  #   if(content != "")
+  #     Session.set "editingSlide", false
 
   # "input .auto-preview": (e) ->
   #   Session.setPersistent "slideContent", e.target.value

@@ -1,15 +1,16 @@
 Template.slideFooter.helpers
   hasContent: ->
-    if (Session.get("slideContent") != "")
+
+    if Session.get("slideContent") != ""
       return true
     else
       return false
 
-Template.slideControls.events
+Template.slideFooter.events
  
   "click .clear-content-btn": (e) ->
-    e.preventDefault()
     Session.set "slideContent", ""
-    $('textarea.clear-content').garlic('destroy')
-    DkHelpers.setDocTitle(Session.get "slideContent")
+    $('.clear-content').garlic('destroy')
+    console.log(Session.get "slideContent")
+    DkHelpers.setDocTitle("")
     Session.set "editingSlide", true

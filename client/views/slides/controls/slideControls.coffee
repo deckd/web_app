@@ -1,6 +1,9 @@
 Template.slideControls.helpers
-  editingSlide: ->
-    Session.get "editingSlide"
+  hasContent: ->
+    if (Session.get("slideContent") != "")
+      return true
+    else
+      return false
 
   fullScreenActive: ->
     Session.get "fullScreenActive"
@@ -16,8 +19,8 @@ Template.slideControls.events
  
   "click .clear-content-btn": (e) ->
     e.preventDefault()
-    $('textarea.clear-content').garlic('destroy')
     Session.set "slideContent", ""
+    $('textarea.clear-content').garlic('destroy')
     DkHelpers.setDocTitle(Session.get "slideContent")
     Session.set "editingSlide", true
 

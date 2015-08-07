@@ -20,8 +20,11 @@ Template.editSlide.events
 
   "blur .preview-on-blur": (e) ->
     e.stopPropagation()
-    Session.setPersistent "slideContent", e.target.value
-    Session.set "editingSlide", false
+    content = e.target.value
+    Session.setPersistent "slideContent", content
+
+    if(content != "")
+      Session.set "editingSlide", false
 
   # "input .auto-preview": (e) ->
   #   Session.setPersistent "slideContent", e.target.value

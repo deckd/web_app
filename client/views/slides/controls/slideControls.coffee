@@ -18,13 +18,8 @@ Template.slideControls.events
     e.preventDefault()
     $('textarea.clear-content').garlic('destroy')
     Session.set "slideContent", ""
-    Session.set "docTitle", DkConstants.TITLE_BLURB
+    DkHelpers.setDocTitle(Session.get "slideContent")
     Session.set "editingSlide", true
-    # $('.destroy-garlic').focus()
-    
-
-    
-    # console.log($('destroy-garlic').val())
 
   "click .toggle-fullscreen": (e) ->
     e.preventDefault()

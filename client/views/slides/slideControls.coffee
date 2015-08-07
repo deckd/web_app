@@ -14,10 +14,17 @@ Template.slideControls.events
     e.preventDefault()
     Session.set "editingSlide", false
 
-  "click .clear-content": ->
+  "click .clear-content": (e) ->
     e.preventDefault()
-    Session.setPersistent "slideContent", ""
-    document.title = "Untitled"
+    $('.destroy-garlic').garlic('destroy')
+    Session.update "slideContent", ""
+    Session.set "docTitle", "Untitled"
+    Session.set "editingSlide", true
+    # $('.destroy-garlic').focus()
+    
+
+    
+    # console.log($('destroy-garlic').val())
 
   "click .toggle-fullscreen": (e) ->
     e.preventDefault()

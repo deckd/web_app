@@ -1,5 +1,5 @@
 Template.slideShell.onRendered ->
-  if (Session.get("docTitle") != "")
+  if (Session.get("docTitle") == "")
     Session.setPersistent("docTitle", DkConstants.TITLE_BLURB)
 
   document.title = Session.get("docTitle")

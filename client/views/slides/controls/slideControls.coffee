@@ -14,11 +14,11 @@ Template.slideControls.events
     e.preventDefault()
     Session.set "editingSlide", false
  
-  "click .clear-content": (e) ->
+  "click .clear-content-btn": (e) ->
     e.preventDefault()
-    $('.destroy-garlic').garlic('destroy')
-    Session.update "slideContent", ""
-    Session.set "docTitle", "Untitled"
+    $('textarea.clear-content').garlic('destroy')
+    Session.set "slideContent", ""
+    Session.set "docTitle", DkConstants.TITLE_BLURB
     Session.set "editingSlide", true
     # $('.destroy-garlic').focus()
     

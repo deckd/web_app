@@ -1,5 +1,5 @@
 Template.slideShell.onRendered ->
-  # console.log(Session.get "slideContent")
+  console.log(Session.get "slideContent")
   if (Session.get("slideContent") == undefined || Session.get("slideContent") == "")
     Session.set "editingSlide", true
   else

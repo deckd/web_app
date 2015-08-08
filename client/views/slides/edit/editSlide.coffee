@@ -19,13 +19,21 @@ Template.editSlide.events
     DkHelpers.setDocTitle(content)
 
 
-  "blur .preview-on-blur": (e) ->
-    e.stopPropagation()
-    content = e.target.value
-    Session.setPersistent "slideContent", content
+  # "blur .preview-on-blur": (e) ->
+  #   e.stopPropagation()
 
-    if(content != "")
-      Session.set "editingSlide", false
+  #   # delay .5s in case someone clicked on the clear button
+  #   Meteor.setTimeout((
+
+  #     content = e.target.value
+  #     Session.setPersistent "slideContent", content
+
+  #     if(content != "")
+  #       Session.set "editingSlide", false
+
+  #   ), 1000)
+
+
 
   # "input .auto-preview": (e) ->
   #   Session.setPersistent "slideContent", e.target.value

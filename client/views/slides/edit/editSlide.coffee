@@ -19,10 +19,12 @@ Template.editSlide.events
     DkHelpers.setDocTitle(content)
 
 
-  # "blur .preview-on-blur": (e) ->
-  #   e.stopPropagation()
+  "blur .preview-on-blur": (e) ->
+    DkHelpers.previewOnBlur.start()
 
-  #   # delay .5s in case someone clicked on the clear button
+
+  #  on blur, delay switching to preview mode .5s
+    # if hasContent, then set edit to false, else do nothing
   #   Meteor.setTimeout((
 
   #     content = e.target.value

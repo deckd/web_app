@@ -1,5 +1,6 @@
 @import "normalize"
 @import "variables"
+// @import "mobile"
 @import "base"
 @import "helpers"
 @import "slides"
@@ -84,3 +85,16 @@ button
 
     &:focus
      outline: 0
+
+@media all and (max-width:550px)
+  .slide
+    font-size: 2em
+
+  .help-text
+    font-size: .75em
+  .brand
+    font-size: 1.25em;
+  .fa-2x
+    font-size:1.5em
+
+

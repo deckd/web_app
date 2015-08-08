@@ -5,6 +5,11 @@ Template.slideFooter.helpers
       return true
     else
       return false
+  helpText: ->
+    if Session.get("slideContent") == ""
+      DkConstants.DFLT_HELP
+    else
+      DkConstants.FORMATTING_HELP
 
 Template.slideFooter.events
  

@@ -1,10 +1,10 @@
 Template.slideFooter.helpers
   hasContent: ->
-
     if Session.get("slideContent") != ""
       return true
     else
       return false
+
   helpText: ->
     if Session.get("slideContent") == ""
       DkConstants.DFLT_HELP
@@ -14,9 +14,12 @@ Template.slideFooter.helpers
 Template.slideFooter.events
  
   "click .clear-content-btn": (e) ->
+    
+    Session.set("tmpContent", Session.get("slideContent"))
+    Session.set("undoAction", true)
     Session.setPersistent "slideContent", ""
-    sAlert.success('Deck cleared', {effect: 'stackslide', position: 'bottom-left'})
-    # $('.clear-content').garlic('destroy')
-    # console.log(Session.get "slideContent")
+
+    clearContentAlert = sAlert.success('Deck content cleared', {effect: 'stackslide', position: 'bottom-right', timeout: 5000})
+    Session.set "clearContentAlert", clearContentAlert
     DkHelpers.setDocTitle("")
     Session.set "editingSlide", true

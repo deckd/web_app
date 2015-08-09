@@ -14,7 +14,8 @@ Template.slideFooter.helpers
 Template.slideFooter.events
  
   "click .clear-content-btn": (e) ->
-    Session.set "slideContent", ""
+    Session.setPersistent "slideContent", ""
+    sAlert.success('Deck cleared', {effect: 'stackslide', position: 'bottom-left'})
     # $('.clear-content').garlic('destroy')
     # console.log(Session.get "slideContent")
     DkHelpers.setDocTitle("")

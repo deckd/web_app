@@ -1,5 +1,5 @@
 Template.slideShell.onRendered ->
-  # console.log(Session.get "slideContent")
+  
   if (Session.get("slideContent") == undefined || Session.get("slideContent") == "")
     Session.set "editingSlide", true
   else
@@ -11,9 +11,13 @@ Template.slideShell.onRendered ->
   document.title = Session.get("docTitle")
 
 
+
 Template.slideShell.helpers
   editingSlide: ->
-    Session.get "editingSlide"
-
-  fullScreenActive: ->
-    Session.get "fullScreenActive"
+    editStatus = Session.get "editingSlide"
+    if editStatus
+      $('body').removeClass('view-mode')
+      return true
+    else
+      $('body').addClass('view-mode')
+      return false

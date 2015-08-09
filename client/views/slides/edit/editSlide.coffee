@@ -4,12 +4,13 @@ Template.editSlide.onRendered ->
   DkHelpers.autoPreview.start()
 
 Template.editSlide.helpers
-    slideContent: ->
-      Session.get "slideContent"
+  slideContent: ->
+     Session.get "slideContent"
 
 Template.editSlide.events
 
   "focus .auto-save-preview": (e) ->
+    $('body').removeClass('view-mode')
     DkHelpers.autoPreview.reset()
     DkHelpers.autoPreview.start()
 

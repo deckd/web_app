@@ -19,7 +19,7 @@ Template.slideFooter.events
     Session.set("undoAction", true)
     Session.setPersistent "slideContent", ""
 
-    clearContentAlert = sAlert.success('Deck content cleared', {effect: 'stackslide', position: 'bottom-right', timeout: 5000})
+    clearContentAlert = sAlert.success('Deck content cleared', {effect: 'stackslide', position: 'bottom', timeout: 5000})
     Session.set "clearContentAlert", clearContentAlert
     DkHelpers.setDocTitle("")
     Session.set "editingSlide", true

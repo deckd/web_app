@@ -1,7 +1,9 @@
 Template.editSlide.onRendered ->
   $('.slide').focus()
-  DkHelpers.autoPreview.reset()
-  DkHelpers.autoPreview.start()
+
+  if Meteor.Device.isDesktop()
+    DkHelpers.autoPreview.reset()
+    DkHelpers.autoPreview.start()
 
 Template.editSlide.helpers
   slideContent: ->
@@ -19,8 +21,9 @@ Template.editSlide.events
     Session.setPersistent "slideContent", content
     DkHelpers.setDocTitle(content)
 
-    DkHelpers.autoPreview.reset()
-    DkHelpers.autoPreview.start()
+    if Meteor.Device.isDesktop()
+      DkHelpers.autoPreview.reset()
+      DkHelpers.autoPreview.start()
 
   "blur .preview-on-blur": (e) ->
     Meteor.setTimeout((->

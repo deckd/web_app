@@ -1,0 +1,15 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "device-detection": {}
+    },
+    "packages": {
+      "device-detection": {
+        "git": "https://github.com/mystor/meteor-device-detection.git",
+        "tag": "v0.1.6",
+        "commit": "a7909c2319a694b9caa959164485d7413dced435"
+      }
+    }
+  }
+}

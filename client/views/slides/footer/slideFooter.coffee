@@ -12,6 +12,9 @@ Template.slideFooter.helpers
       DkConstants.FORMATTING_HELP
 
 Template.slideFooter.events
+
+  "click .presentation-mode": ->
+    Session.set "editingSlide", false
  
   "click .clear-content-btn": (e) ->
     

@@ -2,11 +2,9 @@ Template.dkAlert.helpers
   undoAction: ->
     Session.get "undoAction"
 
-
 Template.dkAlert.events
 
   "click .undo-action": (e) ->
-    # console.log("Clicked undo")
     e.preventDefault()
     sAlert.close(Session.get("clearContentAlert"))
 

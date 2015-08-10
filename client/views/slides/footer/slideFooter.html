@@ -17,7 +17,9 @@
         </div>
         <div class="table-cell vertical-middle align-center full-width">
         {{#if hasContent}}
-          <button type="button" class="icon-button medium-button presentation-mode" title="Switch to presentation mode" alt="Switch to presentation mode"><i class="fa fa-youtube-play fa-3x"></i></button>
+         <button type="button" class="icon-button medium-button presentation-mode with-help" title="Switch to presentation mode" alt="Switch to presentation mode"><i class="fa fa-youtube-play fa-3x"></i></button>
+         {{#if isDesktop}}
+         <p class="help-text small-text no-padding no-margin">(Or use Shift + Return)</p>{{/if}}
         {{else}}<span class="help-text">{{{helpText}}}</span>
         {{/if}}
         </div>

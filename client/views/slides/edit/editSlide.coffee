@@ -13,8 +13,10 @@ Template.editSlide.events
 
   "focus .auto-save-preview": (e) ->
     $('body').removeClass('view-mode')
-    DkHelpers.autoPreview.reset()
-    DkHelpers.autoPreview.start()
+
+    if Meteor.Device.isDesktop()
+      DkHelpers.autoPreview.reset()
+      DkHelpers.autoPreview.start()
 
   "input .auto-save-preview": (e) ->
     content = e.target.value

@@ -7,8 +7,6 @@ Template.slideFooter.helpers
 
   helpText: ->
     if Session.get("slideContent") == ""
-      DkConstants.DFLT_HELP
-    else
       DkConstants.FORMATTING_HELP
 
 Template.slideFooter.events

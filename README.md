@@ -8,7 +8,7 @@
 
 ## Examples
 
-Welcome message for an event(projected on a screen):
+Welcome message for an event (projected on a screen):
 
 ![deckd-example](https://cloud.githubusercontent.com/assets/819213/9255784/82aefc68-41b9-11e5-8fad-54265c69f195.png)
 

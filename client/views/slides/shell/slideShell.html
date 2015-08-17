@@ -1,9 +1,7 @@
 <template name="slideShell">
 <div class="display-table full-width full-height">
-<div class="table-row full-width app-header">
-   <div class="table-cell full-width align-right">
-       {{> loginButtons}}
-    </div>
+<div class="table-row app-header">
+  {{> appHeader}}
 </div>
   <div class="table-row full-width full-height app-content-row">
   {{#if editingSlide}}

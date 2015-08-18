@@ -1,6 +1,11 @@
 Template.appHeader.events({
   'click .create-post-from-local': function(){
 
+    // only display link if no current user ()
+    // display login modal overlay
+    // wait for isLoggingin to return false
+
+
     AntiModals.overlay('loginModal');
     //console.log("Title: #{Session.get 'docTitle'}, Content: #{Session.get 'slideContent'}")
 

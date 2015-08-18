@@ -25,5 +25,7 @@ ongoworks:security
 msavin:mongol
 iron:router
 sacha:spin
-useraccounts:unstyled
 anti:modals
+useraccounts:unstyled
+accounts-facebook
+accounts-google

@@ -30,3 +30,5 @@ useraccounts:unstyled
 accounts-facebook
 accounts-google
 useraccounts:iron-routing
+lookback:dropdowns
+utilities:avatar

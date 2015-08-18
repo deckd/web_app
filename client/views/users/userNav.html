@@ -1,0 +1,17 @@
+<template name="userNav">
+<div class="dropdown-container">
+{{#dropdownTrigger name="user_nav_dropdown"}}
+<button class="unstyled">
+  {{#with currentUser}}
+    {{> avatar user=this shape="circle" size="small"}}
+  {{/with}}
+</button>
+{{/dropdownTrigger}}
+
+{{#dropdown name="user_nav_dropdown"}}
+<button class="unstyled logout">
+  Sign Out
+</button>
+{{/dropdown}}
+</div>
+</template>

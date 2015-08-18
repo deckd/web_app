@@ -1,12 +1,31 @@
 <template name="appHeader">
   <div class="display-table">
-      <div class="table-row">
-        <div class="table-cell">
-        </div>
+    <div class="table-row">
       <div class="table-cell">
+      {{#unless currentUser}}
       <a href="/login" class="save-for-later">Share/Save for later...</a>
+      {{/unless}}
       </div>
+      <div class="table-cell">
+      {{#if currentUser}}
+        <div class="dropdown-container">
+        {{#dropdownTrigger name="user_nav_dropdown"}}
+          <button class="btn-unstyled">
+            {{#with currentUser}}
+              {{> avatar user=this shape="circle"}}
+            {{/with}}
+          </button>
+        {{/dropdownTrigger}}
+
+        {{#dropdown name="user_nav_dropdown"}}
+          <button class="unstyled logout">
+            Sign Out
+          </button>
+        {{/dropdown}}
+        </div>
+      {{/if}}
       </div>
     </div>
+  </div>
 </template>
 

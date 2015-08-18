@@ -32,3 +32,5 @@ accounts-google
 useraccounts:iron-routing
 lookback:dropdowns
 utilities:avatar
+service-configuration
+accounts-ui

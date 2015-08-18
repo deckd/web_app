@@ -2,9 +2,9 @@
   <div class="display-table">
     <div class="table-row">
       <div class="table-cell">
-      {{#unless currentUser}}
+      {{#if saveForLater}}
       <a href="/login" class="save-for-later">Share/Save for later...</a>
-      {{/unless}}
+      {{/if}}
       </div>
       <div class="table-cell vertical-middle">
       {{#if currentUser}}

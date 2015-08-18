@@ -1,6 +1,7 @@
 Template.loginModal.helpers({
-  createFromLocal: function(){
-    if (Session.get("loginModal")) {} else{};
+  saveForLater: function(){
+   
+    // if (Session.get("loginModal")) {} else{};
   }
 
 });

@@ -1,0 +1,14 @@
+<template name="mainLayout">
+  {{> sAlert template='dkAlert'}}
+  <div class="app-container fhw">
+    <div class="display-table fhw">
+      <div class="table-row app-header">
+        {{> appHeader}}
+      </div>
+      <div class="table-row fhw app-content-row">
+        {{> yield}}
+      </div>
+    </div>
+  </div>
+  {{> googleAnalytics}}
+ </template>

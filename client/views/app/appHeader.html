@@ -2,7 +2,9 @@
   <div class="display-table full-width">
     <div class="table-row">
       <div class="table-cell align-left">
-        Changes saved locally.
+        {{#if changesSavedMsg }}
+          Changes saved locally.
+        {{/if}}
       </div>
       <div class="table-cell vertical-middle">
         {{#if currentUser}}

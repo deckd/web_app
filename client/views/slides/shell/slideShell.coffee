@@ -10,8 +10,6 @@ Template.slideShell.onRendered ->
 
   document.title = Session.get("docTitle")
 
-
-
 Template.slideShell.helpers
   editingSlide: ->
     editStatus = Session.get "editingSlide"

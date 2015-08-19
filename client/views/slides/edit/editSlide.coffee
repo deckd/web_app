@@ -17,5 +17,5 @@ Template.editSlide.events
     DkHelpers.setDocTitle(content)
 
   "keydown .shift-return": (e) ->
-    if (e.keyCode == 13 && e.shiftKey)
+    if (e.keyCode == 13 && e.shiftKey && Session.get slideContent != "")
       Session.set("editingSlide", false)

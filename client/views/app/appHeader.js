@@ -1,8 +1,11 @@
 Template.appHeader.helpers({
-  saveForLater: function(){
+  saveForLaterLink: function(){
     var currentView = Router.current().route.getName();
 
-    if( currentView === 'home' && !Session.get("saveForLater") ){
+    // When viewing the homepage AND slide has content AND user is anonymous
+    // Assumes that authenticated users will always be redirected to a id-based post
+    //TODO: refactor - this is very fragile
+    if( currentView == 'home' && Session.get("slideContent") != "" && !Meteor.userId() ){
       return true;
     } else {
       return false;
@@ -11,10 +14,11 @@ Template.appHeader.helpers({
 });
 
 Template.appHeader.events({
-  'click .save-for-later': function(){
+  'click .save-for-later': function(e){
+    e.preventDefault();
     Session.set("saveForLater", true);
-    Router.go('login');
-    // AntiModals.overlay('loginModal');
+    // Router.go('login');
+    AntiModals.overlay('loginModal');
     // Router.go('save-for-later');
   },
   "click .logout": function (e,t) {

@@ -4,9 +4,11 @@
       <div class="table-cell align-left">
         {{#if changesSavedMsg }}
           Changes saved locally.
+          {{else}}
+          &nbsp;
         {{/if}}
       </div>
-      <div class="table-cell centered">
+      <div class="table-cell">
         {{#if currentUser}}
           <div class="dropdown-container">
             {{#dropdownTrigger name="user_nav_dropdown"}}
@@ -27,8 +29,8 @@
         {{/if}}
       </div>
       <div class="table-cell align-right">
-        {{#if saveForLater}}
-          <a href="/login" class="save-for-later">Save to the cloud</a>
+        {{#if saveForLaterLink}}
+          <a href="#" class="save-for-later">Save to the cloud</a>
         {{/if}}
       </div>
     </div>

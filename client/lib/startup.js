@@ -1,3 +1,9 @@
 Meteor.startup(function () {
-  Session.setDefault("slideContent","");
+
+  Session.setDefault({
+    slideContent: "",
+    saveForLaterLink: false,
+    savingForLater: false
+  });
+
 });

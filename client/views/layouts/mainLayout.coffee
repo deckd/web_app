@@ -1,9 +1,13 @@
-Template.slideShell.onRendered ->
-  
+Template.mainLayout.onRendered ->  
   if (Session.get("slideContent") == "")
-    Session.set "editingSlide", true
+    Session.set "showAppFooter", true
   else
-    Session.set "editingSlide", false
+    Session.set "showAppFooter", false
+  
+  if (Session.get("docTitle") == "" || Session.get("docTitle") == undefined)
+    Session.setPersistent("docTitle", DkConstants.TITLE_BLURB)
+
+  document.title = Session.get("docTitle")
 
 # Template.slideShell.helpers
 #   editingSlide: ->

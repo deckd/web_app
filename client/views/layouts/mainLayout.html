@@ -9,7 +9,9 @@
         {{> yield}}
       </div>
       <div class="table-row">
-         {{> slideFooter}}
+       {{#if showAppFooter}}
+        {{> appFooter}}
+       {{/if}}
       </div>
     </div>
   </div>

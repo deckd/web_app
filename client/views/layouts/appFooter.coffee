@@ -1,4 +1,4 @@
-Template.slideFooter.helpers
+Template.appFooter.helpers
   hasContent: ->
     if Session.get("slideContent") != ""
       return true
@@ -9,7 +9,7 @@ Template.slideFooter.helpers
     if Session.get("slideContent") == ""
       DkConstants.FORMATTING_HELP
 
-Template.slideFooter.events
+Template.appFooter.events
 
   "click .presentation-mode": ->
     Session.set "editingSlide", false

@@ -1,22 +1,22 @@
-Template.slideControls.helpers
-  # hasContent: ->
-  #   if (Session.get("slideContent") != "")
-  #     return true
-  #   else
-  #     return false
+# Template.slideControls.helpers
+#   # hasContent: ->
+#   #   if (Session.get("slideContent") != "")
+#   #     return true
+#   #   else
+#   #     return false
 
-  fullScreenActive: ->
-    Session.get "fullScreenActive"
+#   fullScreenActive: ->
+#     Session.get "fullScreenActive"
 
-Template.slideControls.events
-  "click .edit-slide": (e) ->
-    e.preventDefault()
-    Session.set "editingSlide", true
+# Template.slideControls.events
+#   "click .edit-slide": (e) ->
+#     e.preventDefault()
+#     Session.set "editingSlide", true
 
-  "click .view-slide": (e) ->
-    e.preventDefault()
-    Session.set "editingSlide", false
- 
+#   "click .view-slide": (e) ->
+#     e.preventDefault()
+#     Session.set "editingSlide", false
+#  
   # "click .clear-content-btn": (e) ->
   #   e.preventDefault()
   #   Session.set "slideContent", ""

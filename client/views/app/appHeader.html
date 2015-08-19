@@ -1,29 +1,33 @@
 <template name="appHeader">
-  <div class="display-table">
+  <div class="display-table full-width">
     <div class="table-row">
-      <div class="table-cell">
-      {{#if saveForLater}}
-      <a href="/login" class="save-for-later">Share/Save for later...</a>
-      {{/if}}
+      <div class="table-cell align-left">
+        Changes saved locally.
       </div>
       <div class="table-cell vertical-middle">
-      {{#if currentUser}}
-        <div class="dropdown-container">
-        {{#dropdownTrigger name="user_nav_dropdown"}}
-          <button class="btn-unstyled">
-            {{#with currentUser}}
-              {{> avatar user=this shape="circle"}}
-            {{/with}}
-          </button>
-        {{/dropdownTrigger}}
-
-        {{#dropdown name="user_nav_dropdown"}}
-          <button class="unstyled logout">
-            Sign Out
-          </button>
-        {{/dropdown}}
-        </div>
-      {{/if}}
+        {{#if currentUser}}
+          <div class="dropdown-container">
+            {{#dropdownTrigger name="user_nav_dropdown"}}
+              <button class="btn-unstyled">
+                {{#with currentUser}}
+                  {{> avatar user=this shape="circle"}}
+                {{/with}}
+              </button>
+            {{/dropdownTrigger}}
+            {{#dropdown name="user_nav_dropdown"}}
+              <button class="unstyled logout">
+                Sign Out
+              </button>
+            {{/dropdown}}
+          </div>
+          {{else}}
+          &nbsp;
+        {{/if}}
+      </div>
+      <div class="table-cell align-right">
+        {{#if saveForLater}}
+          <a href="/login" class="save-for-later">Save to the cloud</a>
+        {{/if}}
       </div>
     </div>
   </div>

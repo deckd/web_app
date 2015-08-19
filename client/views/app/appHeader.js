@@ -2,7 +2,7 @@ Template.appHeader.helpers({
   saveForLater: function(){
     var currentView = Router.current().route.getName();
 
-    if( currentView == 'home' && !Session.get("saveForLater") ){
+    if( currentView === 'home' && !Session.get("saveForLater") ){
       return true;
     } else {
       return false;

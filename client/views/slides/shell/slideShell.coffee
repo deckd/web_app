@@ -5,7 +5,7 @@ Template.slideShell.onRendered ->
   else
     Session.set "editingSlide", false
   
-  if (Session.get("docTitle") == "")
+  if (Session.get("docTitle") == "" || Session.get("docTitle") == undefined)
     Session.setPersistent("docTitle", DkConstants.TITLE_BLURB)
 
   document.title = Session.get("docTitle")

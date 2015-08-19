@@ -14,6 +14,7 @@ Template.dkAlert.events
     Session.set "undoAction", false
 
     DkHelpers.setDocTitle(Session.get("slideContent"))
+    
     Meteor.setTimeout((->
       sAlert.info('Deck content restored.', {effect: 'stackslide', position: 'bottom'})
     ), 500)

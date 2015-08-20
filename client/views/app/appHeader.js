@@ -19,6 +19,9 @@ Template.appHeader.events({
     Session.set("savingForLater", true);
     // Router.go('login');
     AntiModals.overlay('loginModal');
+
+    // var overlay = document.getElementsByClassName("anti-modal-overlay")[0];
+    // console.log(overlay);
     // Router.go('save-for-later');
   },
   "click .logout": function (e,t) {

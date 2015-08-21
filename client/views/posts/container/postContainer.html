@@ -1,14 +1,14 @@
-<template name="slideShell">
+<template name="postContainer">
   <div class="table-row fhw app-content-row">
     <div class="table-cell fhw">
-      {{#if editingSlide}}
-        {{> editSlide}}
+      {{#if editingPost}}
+        {{> editPost}}
       {{else}}
-        {{> viewSlide}}
+        {{> showPost}}
       {{/if}}
     </div>
   </div>
-  {{#if editingSlide}}
+  {{#if editingPost}}
     {{> appFooter}}
   {{/if}}
 </template>

@@ -11,8 +11,8 @@ Template.appFooter.helpers
 
 Template.appFooter.events
 
-  "click .presentation-mode": ->
-    Session.set "editingSlide", false
+  # "click .presentation-mode": ->
+  #   Session.set "editingSlide", false
  
   "click .clear-content-btn": (e) ->
     

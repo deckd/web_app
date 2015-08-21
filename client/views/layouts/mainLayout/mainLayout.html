@@ -2,10 +2,15 @@
   {{> sAlert template='dkAlert'}}
   <div class="app-container fhw">
     <div class="display-table fhw">
-      <div class="table-row app-header">
-        {{> appHeader}}
-      </div>
+      {{#if currentUser}}
+        <div class="table-row app-header">
+          {{> appHeader}}
+        </div>
+      {{/if}}
       {{> yield}}
+      {{#unless viewMode}}
+        {{> appFooter}}
+      {{/unless}}
     </div>
   </div>
   {{> googleAnalytics}}

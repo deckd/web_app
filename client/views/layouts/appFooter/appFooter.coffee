@@ -17,7 +17,6 @@ Template.appFooter.events
       Router.go 'editPost', { _id: Router.current().params._id }
     else
       Session.set 'editingPost', false
-      console.log Session.get "editingPost"
  
   "click .clear-content-btn": (e) ->
     

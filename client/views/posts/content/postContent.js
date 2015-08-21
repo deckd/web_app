@@ -1,11 +1,5 @@
-Template.postContent.onCreated(function(){
-  Session.set("editingPost", true);
-    // if (Session.get("postContent") === ""){
-    //   Session.set("editingPost", true);
-    // } else {
-    //   Session.set("editingPost", false);
-    // };
-});
+// Template.postContent.onCreated(function(){
+// });
 
 Template.postContent.onRendered(function(){
   if (Session.get("editingPost")){
@@ -23,7 +17,6 @@ Template.postContent.onRendered(function(){
 
 Template.postContent.helpers({
   editingPost: function(){
-    // return Session.get("editingPost");
     return Session.get("editingPost");
   }, 
   postContent: function(){

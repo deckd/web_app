@@ -2,9 +2,9 @@
   <div class="table-row fhw app-content-row">
     <div class="table-cell fhw">
       {{#if editingPost}}
-        <textarea id="post_content" name="slide" class="full-height slide get-content fhw preview-on-blur auto-preview clear-content auto-save-preview shift-return" placeholder="Write something...">{{postContent}}</textarea>
+        <textarea id="post_content" name="slide" class="fhw slide local-save clear-content show-on-shift-return" placeholder="Write something...">{{postContent}}</textarea>
       {{else}}
-        <div class="slide pointer-cursor full-width full-height click-to-edit clear-content">
+        <div class="fhw slide pointer-cursor click-to-edit clear-content">
           {{#markdown}}{{postContent}}{{/markdown}}
         </div>
       {{/if}}

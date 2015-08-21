@@ -11,8 +11,13 @@ Template.appFooter.helpers
 
 Template.appFooter.events
 
-  # "click .presentation-mode": ->
-  #   Session.set "editingSlide", false
+  "click .presentation-mode": ->
+
+    if(Meteor.user())
+      Router.go 'editPost', { _id: Router.current().params._id }
+    else
+      Session.set 'editingPost', false
+      console.log Session.get "editingPost"
  
   "click .clear-content-btn": (e) ->
     

@@ -4,7 +4,9 @@ Meteor.startup(function () {
     slideContent: "",
     saveForLaterLink: false,
     savingForLater: false,
-    viewMode: false
+    viewMode: false,
+    editingPost: true,
+    postContent: ""
   });
 
 });

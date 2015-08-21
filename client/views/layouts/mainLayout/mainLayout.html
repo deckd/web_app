@@ -8,9 +8,9 @@
         </div>
       {{/if}}
       {{> yield}}
-      {{#unless viewMode}}
+      {{#if editingPost}}
         {{> appFooter}}
-      {{/unless}}
+      {{/if}}
     </div>
   </div>
   {{> googleAnalytics}}

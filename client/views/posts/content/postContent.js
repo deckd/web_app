@@ -1,9 +1,9 @@
 Template.postContent.onCreated(function(){
 
-    if (Session.get("slideContent") === ""){
-      Session.set("editingSlide", true);
+    if (Session.get("postContent") === ""){
+      Session.set("editingPost", true);
     } else {
-      Session.set("editingSlide", false);
+      Session.set("editingPost", false);
     };
 
 });
@@ -26,7 +26,7 @@ Template.postContent.helpers({
 
   editingPost: function(){
     // return Session.get("editingPost");
-    return Session.get("editingSlide");
+    return Session.get("editingPost");
   },
    
   postContent: function(){
@@ -42,9 +42,14 @@ Template.postContent.helpers({
   }
 });
 
-Template.showPost.events({
-  "click .click-to-edit":function(e){
-    Router.go('editPost', { _id: Router.current().params._id });
+Template.postContent.events({
+  "click .click-to-edit":function(){
+
+    if(Meteor.user()){
+      Router.go('editPost', { _id: Router.current().params._id });
+    } else {
+      Session.set("editingSlide", true);
+    };
   } 
 });
 

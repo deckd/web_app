@@ -5,14 +5,7 @@
       <div class="table-row app-header">
         {{> appHeader}}
       </div>
-      <div class="table-row fhw app-content-row">
-        {{> yield}}
-      </div>
-      <div class="table-row">
-       {{#if showAppFooter}}
-        {{> appFooter}}
-       {{/if}}
-      </div>
+      {{> yield}}
     </div>
   </div>
   {{> googleAnalytics}}

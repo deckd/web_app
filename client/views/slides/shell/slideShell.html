@@ -1,9 +1,11 @@
 <template name="slideShell">
-  <div class="table-cell fhw">
-    {{#if editingSlide}}
-      {{> editSlide}}
-    {{else}}
-       {{> viewSlide}}
-    {{/if}}
+  <div class="table-row fhw app-content-row">
+    <div class="table-cell fhw">
+      <textarea id="post_content" name="slide" class="slide get-content fhw preview-on-blur auto-preview clear-content auto-save-preview shift-return" placeholder="Write something...">{{slideContent}}</textarea>
+   
+    </div>
   </div>
+  {{#if editingSlide}}
+    {{> appFooter}}
+  {{/if}}
 </template>

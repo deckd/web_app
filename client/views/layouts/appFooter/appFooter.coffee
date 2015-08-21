@@ -1,17 +1,17 @@
 Template.appFooter.helpers
-  hasContent: ->
-    if Session.get("slideContent") != ""
-      return true
-    else
+  postContent: ->
+    if Session.get("postContent") == ""
       return false
+    else
+      return true
 
   helpText: ->
-    if Session.get("slideContent") == ""
+    if Session.get("postContent") == ""
       DkConstants.FORMATTING_HELP
 
 Template.appFooter.events
 
-  "click .presentation-mode": ->
+  "click .view-post": ->
 
     if(Meteor.user())
       Router.go 'editPost', { _id: Router.current().params._id }
@@ -20,11 +20,11 @@ Template.appFooter.events
  
   "click .clear-content-btn": (e) ->
     
-    Session.set("tmpContent", Session.get("slideContent"))
+    Session.set("tmpContent", Session.get("postContent"))
     Session.set("undoAction", true)
-    Session.setPersistent "slideContent", ""
+    Session.setPersistent "postContent", ""
 
-    clearContentAlert = sAlert.info('Deck content cleared.', {effect: 'stackslide', position: 'bottom', timeout: 4500})
+    clearContentAlert = sAlert.info('Content cleared.', {effect: 'stackslide', position: 'bottom', timeout: 4500})
     Session.set "clearContentAlert", clearContentAlert
     DkHelpers.setDocTitle("")
-    Session.set "editingSlide", true
+    Session.set "editingPost", true

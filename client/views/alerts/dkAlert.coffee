@@ -8,13 +8,13 @@ Template.dkAlert.events
     e.preventDefault()
     sAlert.close(Session.get("clearContentAlert"))
 
-    Session.setPersistent("slideContent", Session.get("tmpContent"))
+    Session.setPersistent("postContent", Session.get("tmpContent"))
 
     Session.set "tmpContent", ""
     Session.set "undoAction", false
 
-    DkHelpers.setDocTitle(Session.get("slideContent"))
+    DkHelpers.setDocTitle(Session.get("postContent"))
     
     Meteor.setTimeout((->
-      sAlert.info('Deck content restored.', {effect: 'stackslide', position: 'bottom'})
+      sAlert.info('Content restored.', {effect: 'stackslide', position: 'bottom'})
     ), 500)

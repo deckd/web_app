@@ -13,6 +13,11 @@
           <li>
           <a class="icon-link" href="http://github.com/deckd/web_app" title="View Github repo" alt="View Github repo"><i class="fa fa-github"></i></a>
         </li>
+        {{#unless currentUser}}
+        <li>
+          <a class="icon-link modal-login" href="/login" title="Sign in" alt="Sign In"><i class="fa fa-sign-in"></i></a>
+        </li>
+        {{/unless}}
         </ul>
         </div>
         <div class="table-cell vertical-middle align-center full-width">

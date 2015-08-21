@@ -11,6 +11,11 @@ Template.appFooter.helpers
 
 Template.appFooter.events
 
+  "click .modal-login": (e) ->
+    e.preventDefault()
+    AntiModals.overlay('modalLogin');
+
+
   "click .view-post": ->
 
     if(Meteor.user())

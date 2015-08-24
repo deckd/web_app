@@ -1,14 +1,18 @@
 <template name="postContent">
-    <div class="fhw slide pointer-cursor click-to-edit clear-content">
-          {{#markdown}}{{postContent}}{{/markdown}}
-    </div>
+{{#if editingPost}}
+  <textarea id="post_content" name="slide" class="editor local-save clear-content show-on-shift-return " placeholder="Write something...">{{postContent}}</textarea>
+{{else}}
+  <div class="viewer pointer-cursor click-to-edit clear-content">
+    {{#markdown}}{{postContent}}{{/markdown}}
+  </div>
+{{/if}}
 </template>
 
 <template name="tmp">
 {{#if editingPost}}
-        <textarea id="post_content" name="slide" class="fhw slide local-save clear-content show-on-shift-return " placeholder="Write something...">{{postContent}}</textarea>
+        <textarea id="post_content" name="slide" class="slide local-save clear-content show-on-shift-return " placeholder="Write something...">{{postContent}}</textarea>
       {{else}}
-        <div class="fhw slide pointer-cursor click-to-edit clear-content">
+        <div class="slide pointer-cursor click-to-edit clear-content">
           {{#markdown}}{{postContent}}{{/markdown}}
         </div>
       {{/if}}

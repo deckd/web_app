@@ -11,13 +11,13 @@ Template.appFooter.helpers
 
 Template.appFooter.events
 
-  "click .view-post": ->
+  "click .view-mode": ->
+
+    Session.set 'viewMode', true
 
     if(Meteor.user())
-      Router.go 'editPost', { _id: Router.current().params._id }
-    else
-      Session.set 'editingPost', false
- 
+      Router.go 'showPost', { _id: Router.current().params._id }
+       
   "click .clear-content-btn": (e) ->
     
     Session.set("tmpContent", Session.get("postContent"))

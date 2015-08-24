@@ -1,13 +1,9 @@
 <template name="mainLayout">
   {{> sAlert template='dkAlert'}}
-  <div class="app-container fhw">
-    <div class="fhw">
       {{> appHeader}}
-      {{> yield}}
-      {{#if editingPost}}
-        {{> appFooter}}
-      {{/if}}
-    </div>
-  </div>
+      <div class="main-content">
+        {{> yield}} 
+      </div>
+      {{> appFooter}}
   {{> googleAnalytics}}
  </template>

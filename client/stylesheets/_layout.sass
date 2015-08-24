@@ -1,58 +1,25 @@
-html, body
+// Source: https://marcdrummond.com/posts/2014/08/04/adding-sticky-footer-flexbox
+html
   height: 100%
   box-sizing: border-box
-  padding:0
-  margin:0
 
 *, *:before, *:after
     box-sizing: inherit
 
-body
-  overflow:hidden
-  padding:0
-  margin:0
-
+// appended to body tag in client/lib/startup.js
 .app-container
-  // display: flex
-  // flex-direction: row
-  padding:0
-  margin:0
-    // padding: 1.25em 0 0.5em 0
-  // max-width: 85em
-    // max-height: 90em
-    // margin-left: auto
-    // margin-right: auto
-
-.app-header
+  display: flex
+  min-height: 100%
+  flex-direction: column
 
 .main-content
-  flex-grow: 1
-  
-.sidebar-column
-    max-width: 3em
+  flex: 1 0 auto
 
-.app-content-row
-    height: 90%
+// Layout Helpers
+// ________________________
 
-.brand
-    font-family: $courgette-family
-    font-size: 1.5em
-    padding: 0.25em
-    // color: $off-white
-    width: 4em
+.no-padding
+  padding:0
 
-.app-info
-    text-align: center
-    // color: $gray
-    font-size: 1.75em
-    margin:0
-    padding:0
-
-.app-controls
-    width: 5em
-
-.bottom-cell
-    padding-bottom: 0.5em
-
-.icon-cell, .content-cell
-    height: 5em
+.no-margin
+  margin:0

@@ -2,7 +2,7 @@
   <div class="table-row full-width">
     <div class="table-cell full-width">
       <div class="display-table full-width slide-footer">
-        <div class="table-cell">
+        <div class="table-cell vertical-middle align-left">
         <ul class="horizontal">
         <li>
            <span class="brand">Deckd</span>
@@ -14,9 +14,9 @@
           <a class="icon-link" href="http://github.com/deckd/web_app" title="View Github repo" alt="View Github repo"><i class="fa fa-github"></i></a>
         </li>
         {{#unless currentUser}}
-        <li>
+    <!--     <li>
           <a class="icon-link modal-login" href="/login" title="Sign in" alt="Sign In"><i class="fa fa-sign-in"></i></a>
-        </li>
+        </li> -->
         {{/unless}}
         </ul>
         </div>
@@ -28,9 +28,9 @@
         {{else}}<span class="help-text">{{{helpText}}}</span>
         {{/if}}
         </div>
-        <div class="table-cell vertical-middle align-right">
+        <div class="table-cell vertical-middle align-center">
           {{#if postContent}}
-           <button type="button" class="icon-button medium-button clear-content-btn" title="Clear page content" alt="Clear page content"><i class="fa fa-trash-o fa-2x"></i></button>
+               <button type="button" class="icon-button medium-button clear-content-btn" title="Clear page content" alt="Clear page content"><i class="fa fa-trash-o fa-2x"></i></button>
            {{/if}}
         </div>
       </div>

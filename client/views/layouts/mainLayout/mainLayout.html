@@ -1,12 +1,8 @@
 <template name="mainLayout">
   {{> sAlert template='dkAlert'}}
   <div class="app-container fhw">
-    <div class="display-table fhw">
-      {{#if currentUser}}
-        <div class="table-row app-header">
-          {{> appHeader}}
-        </div>
-      {{/if}}
+    <div class="fhw">
+      {{> appHeader}}
       {{> yield}}
       {{#if editingPost}}
         {{> appFooter}}

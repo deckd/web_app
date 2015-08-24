@@ -1,14 +1,11 @@
 <template name="appHeader">
+<!-- <div class="table-row"> -->
   <div class="display-table full-width">
     <div class="table-row">
       <div class="table-cell align-left">
-        {{#if changesSavedMsg }}
-          Changes saved locally.
-          {{else}}
-          &nbsp;
-        {{/if}}
+          <button type="button" class="icon-button medium-button save-to-cloud" title="Save to cloud" alt="Save to cloud"><i class="fa fa-cloud-upload"></i></button>
       </div>
-      <div class="table-cell">
+      <div class="table-cell align-right">
         {{#if currentUser}}
           <div class="dropdown-container">
             {{#dropdownTrigger name="user_nav_dropdown"}}
@@ -25,7 +22,7 @@
             {{/dropdown}}
           </div>
           {{else}}
-          &nbsp;Deckd
+          <button type="button" class="icon-button medium-button modal-login" title="Sign in" alt="Sign In"><i class="fa fa-sign-in"></i></button>        
         {{/if}}
       </div>
       <div class="table-cell align-right">
@@ -35,5 +32,6 @@
       </div>
     </div>
   </div>
+<!--     </div> -->
 </template>
 

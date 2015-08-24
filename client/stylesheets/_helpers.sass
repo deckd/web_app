@@ -1,26 +1,44 @@
-// LAYOUT
+// FLEX LAYOUT
+// _________________________
+.display-flex
+  display: flex
+.flex-row
+  flex-direction: row
+
+// TABLE LAYOUT
+// _________________________
+
 .display-table
   display: table
+  border-spacing: 0
   border-collapse: collapse
 
-  .table-row
-    display: table-row
+.table-row
+  display: table-row
+  border:0
+  padding: 0
+  border-spacing: 0
 
-    .table-cell
-      display: table-cell
+.table-cell
+  display: table-cell
+  cellspacing:0
+  cellpadding:0
+  margin:0
+  padding: 0
+  border:0
 
-      &.vertical-middle
-        vertical-align:middle
+  &.vertical-middle
+    vertical-align:middle
 
-      &.vertical-top
-        vertical-align: top
+  &.vertical-top
+    vertical-align: top
 
-      &.vertical-bottom
-        vertical-align: bottom
+  &.vertical-bottom
+    vertical-align: bottom
 
-      &.centered
-        vertical-align: middle
-        text-align: center
+  &.centered
+    vertical-align: middle
+    text-align: center
 
 
 .height-20em

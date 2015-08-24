@@ -1,13 +1,46 @@
 <template name="postContent">
-  <div class="table-row fhw">
-    <div class="table-cell fhw">
-      {{#if editingPost}}
-        <textarea id="post_content" name="slide" class="fhw slide local-save clear-content show-on-shift-return" placeholder="Write something...">{{postContent}}</textarea>
+<div class="table-row bg-white">
+  <div class="display-table full-width bg-white">
+    <div class="table-row">
+      <div class="table-cell align-left">
+          <button type="button" class="icon-button medium-button save-to-cloud" title="Save to cloud" alt="Save to cloud"><i class="fa fa-cloud-upload"></i></button>
+      </div>
+      <div class="table-cell align-right">
+        {{#if currentUser}}
+          <div class="dropdown-container">
+            {{#dropdownTrigger name="user_nav_dropdown"}}
+              <button class="btn-unstyled">
+                {{#with currentUser}}
+                  {{> avatar user=this shape="circle"}}
+                {{/with}}
+              </button>
+            {{/dropdownTrigger}}
+            {{#dropdown name="user_nav_dropdown"}}
+              <button class="unstyled logout">
+                Sign Out
+              </button>
+            {{/dropdown}}
+          </div>
+          {{else}}
+          <button type="button" class="icon-button medium-button modal-login" title="Sign in" alt="Sign In"><i class="fa fa-sign-in"></i></button>        
+        {{/if}}
+      </div>
+      <div class="table-cell align-right">
+        {{#if saveForLaterLink}}
+          <a href="#" class="save-for-later">Save to the cloud</a>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+    </div>
+</template>
+
+<template name="tmp">
+{{#if editingPost}}
+        <textarea id="post_content" name="slide" class="fhw slide local-save clear-content show-on-shift-return " placeholder="Write something...">{{postContent}}</textarea>
       {{else}}
         <div class="fhw slide pointer-cursor click-to-edit clear-content">
           {{#markdown}}{{postContent}}{{/markdown}}
         </div>
       {{/if}}
-    </div>
-  </div>
 </template>

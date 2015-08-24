@@ -43,9 +43,11 @@ Template.postContent.events({
     };
   },
   "keydown .show-on-shift-return":function(e){
+    e.preventDefault;
     if(Session.get("postContent") !== ""){
       if (e.keyCode === 13 && e.shiftKey){
         Session.set("editingPost", false);
+        return false;
       };
     };
   } 

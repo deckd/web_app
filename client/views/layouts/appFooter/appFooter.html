@@ -1,42 +1,36 @@
 <template name="appFooter">
   <div class="app-footer">
-  <!--   <div class="table-cell full-width"> -->
-      <div class="display-table full-width slide-footer">
-        <div class="table-cell vertical-middle align-left">
-        <ul class="horizontal">
+    <div class="left-section">
+      <ul class="horizontal">
+      <li>
+         <span class="brand">Deckd</span>
+      </li>
+      <li>
+        <a class="icon-link" href="http://twitter.com/deckdapp" title="Go to our Twitter page" alt="Go to our Twitter page"><i class="fa fa-twitter"></i></a>
+      </li>
         <li>
-           <span class="brand">Deckd</span>
-        </li>
-        <li>
-          <a class="icon-link" href="http://twitter.com/deckdapp" title="Go to our Twitter page" alt="Go to our Twitter page"><i class="fa fa-twitter"></i></a>
-        </li>
-          <li>
-          <a class="icon-link" href="http://github.com/deckd/web_app" title="View Github repo" alt="View Github repo"><i class="fa fa-github"></i></a>
-        </li>
-        {{#unless currentUser}}
-    <!--     <li>
-          <a class="icon-link modal-login" href="/login" title="Sign in" alt="Sign In"><i class="fa fa-sign-in"></i></a>
-        </li> -->
-        {{/unless}}
-        </ul>
-        </div>
-        <div class="table-cell vertical-middle align-center full-width">
-        {{#if postContent}}
-         <button type="button" class="icon-button medium-button view-post with-help" title="Switch to view mode" alt="Switch to view mode"><i class="fa fa-youtube-play fa-3x"></i></button>
-         {{#if isDesktop}}
-         <p class="help-text small-text no-padding no-margin">(Or use Shift + Return)</p>{{/if}}
-        {{else}}<span class="help-text">{{{helpText}}}</span>
-        {{/if}}
-        </div>
-        <div class="table-cell vertical-middle align-center">
-          {{#if postContent}}
-               <button type="button" class="icon-button medium-button clear-content-btn" title="Clear page content" alt="Clear page content"><i class="fa fa-trash-o fa-2x"></i></button>
-           {{/if}}
-        </div>
-      </div>
-   <!--  </div> -->
-<!--     <div class="table-cell"> -->
-      &nbsp;
-  <!--   </div> -->
+        <a class="icon-link" href="http://github.com/deckd/web_app" title="View Github repo" alt="View Github repo"><i class="fa fa-github"></i></a>
+      </li>
+      </ul>
     </div>
+    <div class="middle-section align-center">
+      {{#if postContent}}
+        <button type="button" class="icon-button medium-button view-post with-help" title="Switch to view mode" alt="Switch to view mode">
+         <i class="fa fa-youtube-play fa-3x"></i>
+        </button>
+        {{#if isDesktop}}
+          <p class="help-text small-text no-padding no-margin">(Or use Shift + Return)</p>
+        {{/if}}
+      {{else}}
+        <span class="help-text">{{{helpText}}}</span>
+      {{/if}}
+    </div>
+    <div class="right-section">
+      {{#if postContent}}
+         <button type="button" class="icon-button medium-button clear-content-btn" title="Clear page content" alt="Clear page content">
+           <i class="fa fa-trash-o fa-2x"></i>
+         </button>
+       {{/if}}
+    </div>
+  </div>
 </template>

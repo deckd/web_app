@@ -1,11 +1,12 @@
 <template name="appHeader">
   <div class="app-header">
     <div class="left-section">
-      <button type="button" class="icon-button medium-button save-to-cloud" title="Save to cloud" alt="Save to cloud">
+      {{saveMsg}}
+      {{#if saveToCloud}}
+      <a href="#">Save to the cloud...</a>
+<!--       <button type="button" class="icon-button medium-button save-to-cloud" title="Save to cloud" alt="Save to cloud">
         <i class="fa fa-cloud-upload"></i>
-      </button>
-      {{#if saveForLaterLink}}
-        <a href="#" class="save-for-later">Save to the cloud</a>
+      </button> -->
       {{/if}}
     </div>
     <div class="middle-section">

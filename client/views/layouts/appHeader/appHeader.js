@@ -1,17 +1,29 @@
-// Template.appHeader.helpers({
-//   saveForLaterLink: function(){
-//     var currentView = Router.current().route.getName();
+Template.appHeader.helpers({
+  saveMsg: function(){
+    var currentView = Router.current().route.getName();
+    var localSaveMsg = DkConstants.LOCAL_SAVE_MSG;
 
-//     // When viewing the homepage AND slide has content AND user is anonymous
-//     // Assumes that authenticated users will always be redirected to a id-based post
-//     //TODO: refactor - this is very fragile
-//     if( currentView == 'home' && Session.get("slideContent") != "" && !Meteor.userId() ){
-//       return true;
-//     } else {
-//       return false;
-//     }
-//   }
-// });
+    // Assumes that authenticated users will always be redirected to a id-based post
+
+    if ( currentView == 'home' && !Meteor.userId()) {
+      if(Session.get("postContent") === ""){
+        return DkConstants.DFLT_LOCAL_SAVE_MSG;
+      } else {
+        return DkConstants.CHANGE_SAVED_LOCALLY_MSG;
+      }
+
+    } else{
+       return "";
+    };
+  },
+  saveToCloud: function(){
+    if(Session.get("postContent") === ""){
+        return false;
+      } else {
+        return true;
+      }
+  }
+});
 
 // Template.appHeader.events({
 //   'click .save-for-later': function(e){

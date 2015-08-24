@@ -18,32 +18,32 @@ Template.appHeader.helpers({
   },
   saveToCloud: function(){
     if(Session.get("postContent") === ""){
-        return false;
-      } else {
-        return true;
-      }
+      return false;
+    } else {
+      return true;
+    }
   }
 });
 
-// Template.appHeader.events({
-//   'click .save-for-later': function(e){
-//     e.preventDefault();
-//     Session.set("savingForLater", true);
-//     // Router.go('login');
-//     AntiModals.overlay('loginModal');
+Template.appHeader.events({
+  'click .modal-login': function(e){
+    e.preventDefault();
+    Session.set("savingForLater", true);
+    // Router.go('login');
+    AntiModals.overlay('modalLogin');
 
-//     // var overlay = document.getElementsByClassName("anti-modal-overlay")[0];
-//     // console.log(overlay);
-//     // Router.go('save-for-later');
-//   },
-//   "click .logout": function (e,t) {
-//     e.preventDefault();
-//     Meteor.logout(function(error){
-//       if(error){
-//         alert(error);
-//       }
-//        Router.go('login');
-//     });
-//   }
+    // var overlay = document.getElementsByClassName("anti-modal-overlay")[0];
+    // console.log(overlay);
+    // Router.go('save-for-later');
+  },
+  "click .logout": function (e,t) {
+    e.preventDefault();
+    Meteor.logout(function(error){
+      if(error){
+        alert(error);
+      }
+       Router.go('login');
+    });
+  }
 
-// });
+});

@@ -11,17 +11,29 @@ html
   display: flex
   min-height: 100%
   flex-direction: column
+  max-width: 80em
+  margin-left: auto
+  margin-right: auto
 
 .main-content
   flex: 1 0 auto
 
 
-.app-header
+.app-header, .app-footer
   display: flex
   flex-direction: row
-
+  flex-wrap: nowrap
+  align-items: center
+  
   .middle-section
     flex: 1
+
+.app-header
+  height: 3em
+
+.app-footer
+  height: 6em
+
 
 // Layout Helpers
 // ________________________

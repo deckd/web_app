@@ -1,9 +1,9 @@
 <template name="postContent">
 {{#if editingPost}}
-  <textarea id="post_content" name="slide" class="editor local-save clear-content show-on-shift-return " placeholder="Write something...">{{postContent}}</textarea>
+  <textarea id="post_content" name="slide" class="editor local-save clear-content show-on-shift-return " placeholder="Write something...">{{#if localContent}}{{localContent}}{{else}}{{content}}{{/if}}</textarea>
 {{else}}
   <div class="viewer pointer-cursor click-to-edit clear-content">
-    {{#markdown}}{{postContent}}{{/markdown}}
+    {{#markdown}}{{#if localContent}}{{localContent}}{{else}}{{content}}{{/if}}{{/markdown}}
   </div>
 {{/if}}
 </template>

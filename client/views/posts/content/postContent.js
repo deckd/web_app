@@ -19,10 +19,12 @@ Template.postContent.helpers({
   editingPost: function(){
     return Session.get("editingPost");
   }, 
-  postContent: function(){
-    if(Router.current().route.getName() === 'showPost'){
-      var post = Posts.findOne({_id: this._id});
-      return post.content;
+  localContent: function(){
+    if(Router.current().route.getName() === 'showPost' || Router.current().route.getName() === 'editPost'){
+      // var content = this.content;
+      // console.log("post content: " + this.content);
+      // var post = Posts.findOne({_id: this._id});
+      return false;
     } else {
       return Session.get("postContent");
     }

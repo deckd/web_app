@@ -49,6 +49,7 @@ Template.postContent.events({
   
   "input .db-save": function(e){
     var postContent = e.target.value;
+    DkHelpers.setDocTitle(postContent);
 
     var postAttributes = {
       postId: Router.current().params._id,

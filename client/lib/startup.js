@@ -7,7 +7,8 @@ Meteor.startup(function () {
     savingForLater: false,
     viewMode: false,
     editingPost: true,
-    postContent: ""
+    postContent: "",
+    viewMode: ""
   });
 
 });

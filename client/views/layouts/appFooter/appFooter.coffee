@@ -1,12 +1,13 @@
 Template.appFooter.helpers
-  postContent: ->
-    if Session.get("postContent") == ""
-      return false
-    else
-      return true
+  editMode: ->
+    return !Session.get("viewMode")
+    # if Session.get("localContent") == ""
+    #   return false
+    # else
+    #   return true
 
   helpText: ->
-    if Session.get("postContent") == ""
+    if Session.get("localContent") == ""
       DkConstants.FORMATTING_HELP
 
 Template.appFooter.events
@@ -20,9 +21,9 @@ Template.appFooter.events
        
   "click .clear-content-btn": (e) ->
     
-    Session.set("tmpContent", Session.get("postContent"))
+    Session.set("tmpContent", Session.get("localContent"))
     Session.set("undoAction", true)
-    Session.setPersistent "postContent", ""
+    Session.setPersistent "localContent", ""
 
     clearContentAlert = sAlert.info('Content cleared.', {effect: 'stackslide', position: 'bottom', timeout: 4500})
     Session.set "clearContentAlert", clearContentAlert

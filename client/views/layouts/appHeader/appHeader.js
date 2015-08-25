@@ -6,7 +6,7 @@ Template.appHeader.helpers({
     // Assumes that authenticated users will always be redirected to a id-based post
 
     if ( currentView == 'home' && !Meteor.userId()) {
-      if(Session.get("postContent") === ""){
+      if(Session.get("localContent") === ""){
         return DkConstants.DFLT_LOCAL_SAVE_MSG;
       } else {
         return DkConstants.CHANGE_SAVED_LOCALLY_MSG;
@@ -17,7 +17,7 @@ Template.appHeader.helpers({
     };
   },
   saveToCloud: function(){
-    if(Session.get("postContent") === ""){
+    if(Session.get("localContent") === ""){
       return false;
     } else {
       return true;

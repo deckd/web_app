@@ -48,17 +48,17 @@ Template.postContent.events({
   },
   
   "input .db-save": function(e){
-    var content = e.target.value;
+    var postContent = e.target.value;
 
     var postAttributes = {
-      postContent: content
+      postId: Router.current().params._id,
+      content: postContent
     };
 
     Meteor.call('updatePost', postAttributes, function(error, result){
       if (error){
         alert(error.reason);
       } else {
-
       // Session.set("hasContent", false);
       // LogdPageTitles.setPageTitle(result._id,result.title);
       // Router.go('edit_post', {_id: result._id});

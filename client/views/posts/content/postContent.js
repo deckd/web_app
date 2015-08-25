@@ -40,38 +40,48 @@ Template.postContent.helpers({
 });
 
 Template.postContent.events({
-  // want to retain local storage, but instead use garlic at this point?
-  // else will need to append id to sesssion-var, will get complex to manage
-  // need to add/remove local save if not on homepage
-  // feels like maybe should be different templates
 
   "input .local-save": function(e){
-
-    //TODO: only check this once on page rendered
-
-    //can I differentiate the save target here and just have a single auto-save class?
-
-    // if current route is 'home' - save to Session postContent
-    // else save to db *and* save to Session postContent-id (Router.current().params._id)
-
-
     var content = e.target.value;
     Session.setPersistent("localContent", content);
     DkHelpers.setDocTitle(content);
   },
-    "input .db-save": function(e){
-
-    //TODO: only check this once on page rendered
-
-    //can I differentiate the save target here and just have a single auto-save class?
-
-    // if current route is 'home' - save to Session postContent
-    // else save to db *and* save to Session postContent-id (Router.current().params._id)
-
-
+  
+  "input .db-save": function(e){
     var content = e.target.value;
-    Session.setPersistent("localContent", content);
-    DkHelpers.setDocTitle(content);
+
+    var postAttributes = {
+      postContent: content
+    };
+
+    Meteor.call('updatePost', postAttributes, function(error, result){
+      if (error){
+        alert(error.reason);
+      } else {
+
+      // Session.set("hasContent", false);
+      // LogdPageTitles.setPageTitle(result._id,result.title);
+      // Router.go('edit_post', {_id: result._id});
+      };
+    });
+
+      // if current route is 'home' - save to Session postContent
+      // else save to db *and* save to Session postContent-id (Router.current().params._id)
+
+            // want to retain local storage, but instead use garlic at this point?
+    // else will need to append id to sesssion-var, will get complex to manage
+    // need to add/remove local save if not on homepage
+    // feels like maybe should be different templates
+
+      //TODO: only check this once on page rendered
+
+      //can I differentiate the save target here and just have a single auto-save class?
+
+      // if current route is 'home' - save to Session postContent
+      // else save to db *and* save to Session postContent-id (Router.current().params._id)
+
+      // Session.setPersistent("localContent", content);
+      // DkHelpers.setDocTitle(content);
   },
   "click .edit-mode":function(){
     Session.set("viewMode", false);

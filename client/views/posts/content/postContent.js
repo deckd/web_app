@@ -53,7 +53,8 @@ Template.postContent.events({
 
     var postAttributes = {
       postId: Router.current().params._id,
-      content: postContent
+      content: postContent,
+      title: DkHelpers.getPostTitle(postContent)
     };
 
     Meteor.call('updatePost', postAttributes, function(error, result){

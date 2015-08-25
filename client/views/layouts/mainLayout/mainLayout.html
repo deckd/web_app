@@ -1,13 +1,13 @@
 <template name="mainLayout">
   {{> sAlert template='dkAlert'}}
-  {{#unless viewMode}}
-  {{> appHeader}}
-  {{/unless}}
-  <div class="main-content">
+  {{#if editMode}}
+    {{> appHeader}}
+  {{/if}}
+  <div class="main-content {{#if editMode}}editor-layout{{else}}viewer-layout{{/if}}">
     {{> yield}} 
   </div>
-  {{#unless viewMode}}
-  {{> appFooter}}
-  {{/unless}}
+  {{#if editMode}}
+    {{> appFooter}}
+  {{/if}}
   {{> googleAnalytics}}
  </template>

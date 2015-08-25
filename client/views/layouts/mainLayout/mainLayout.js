@@ -10,12 +10,8 @@ Template.mainLayout.onCreated(function(){
   
 Template.mainLayout.helpers({
 
-  viewMode: function(){
-    return Session.get("viewMode");
+  editMode: function(){
+    return !Session.get("viewMode");
   }
-
-  // editingPost: function(){
-  //   return Session.get("editingPost");
-  // }
 
 });

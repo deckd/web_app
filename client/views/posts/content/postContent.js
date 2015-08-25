@@ -1,6 +1,3 @@
-// Template.postContent.onCreated(function(){
-// });
-
 Template.postContent.onRendered(function(){
   if (Session.get("editingPost")){
       $('#post_content').focus();
@@ -16,10 +13,7 @@ Template.postContent.onRendered(function(){
 });
 
 Template.postContent.helpers({
-  // editingPost: function(){
-  //   return Session.get("editingPost");
-  // }, 
-    editMode: function(){
+  editMode: function(){
     return !Session.get("viewMode");
   },
   localContent: function(){

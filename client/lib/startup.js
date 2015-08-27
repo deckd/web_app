@@ -1,5 +1,8 @@
 Meteor.startup(function () {
-  // $('body').addClass('app-container');
+
+
+  BlazeLayout.setRoot('body');
+  $('body').addClass('app-container');
 
   Session.setDefault({
     slideContent: "",

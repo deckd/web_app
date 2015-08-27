@@ -1,30 +1,19 @@
 // **** PUBLIC PAGES ****
 
-// BlazeLayout.setRoot('body');
-
-// PUBLIC LANDING PAGE
-FlowRouter.route('/', {
-  name: 'home',
-  action: function() {
-    BlazeLayout.render('home');
-    console.log("We're on the public homepage");
-  }
-});
-
 var publicRts = FlowRouter.group();
 // add homePublic, login, signup, passwordReset
 
-// publicRts.route('/', {
-//   name: 'editPost',
-//   action: function(){
-//     BlazeLayout.render('editPost', {
-//       header: 'appHeader',
-//       main: 'editPost',
-//       footer: 'appFooter'
-//     });
-//     console.log("We're on the public homepage");
-//   }
-// });
+publicRts.route('/', {
+  name: 'editPost',
+  action: function(){
+    BlazeLayout.render('editPost', {
+      header: 'appHeader',
+      main: 'editPost',
+      footer: 'appFooter'
+    });
+    console.log("We're on the public homepage");
+  }
+});
 
 publicRts.route('/show', {
   name: 'showPost',

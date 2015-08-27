@@ -1,6 +1,6 @@
 Template.appHeader.helpers({
   saveMsg: function(){
-    var currentView = Router.current().route.getName();
+    var currentView = FlowRouter.getRouteName();
     var localSaveMsg = DkConstants.LOCAL_SAVE_MSG;
 
     // Assumes that authenticated users will always be redirected to a id-based post
@@ -26,10 +26,16 @@ Template.appHeader.helpers({
 });
 
 Template.appHeader.events({
+  'click .sidebar': function(){
+    $('.ui.sidebar').sidebar('show');
+
+    // $('.ui.sidebar').sidebar('setting', 'transition', 'overlay').sidebar('toggle');
+
+  },
   'click .modal-login': function(e){
     e.preventDefault();
     Session.set("savingForLater", true);
-    // Router.go('login');
+    // FlowRouter.go('login');
     AntiModals.overlay('modalLogin');
 
     // var overlay = document.getElementsByClassName("anti-modal-overlay")[0];
@@ -42,7 +48,7 @@ Template.appHeader.events({
       if(error){
         alert(error);
       }
-       Router.go('login');
+       FlowRouter.go('login');
     });
   }
 

@@ -1,4 +1,7 @@
 Meteor.startup(function () {
+
+  // See https://atmospherejs.com/kadira/blaze-layout
+  BlazeLayout.setRoot('body');
   $('body').addClass('app-container');
 
   Session.setDefault({
@@ -8,7 +11,9 @@ Meteor.startup(function () {
     viewMode: false,
     editingPost: true,
     postContent: "",
-    viewMode: ""
+    viewMode: "",
+    localPost: false,
+    docTitle: DkConstants.TITLE_BLURB
   });
 
 });

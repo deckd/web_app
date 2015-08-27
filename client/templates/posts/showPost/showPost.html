@@ -1,0 +1,9 @@
+ <template name="showPost">
+   {{> sAlert template='dkAlert'}}
+    <div class="main-content viewer-layout">
+      <div class="viewer pointer-cursor edit-post clear-content">
+      {{#markdown}}{{#if localPost}}{{localContent}}{{else}}{{content}}{{/if}}{{/markdown}}
+    </div>
+  </div>
+  {{> googleAnalytics}}
+ </template>

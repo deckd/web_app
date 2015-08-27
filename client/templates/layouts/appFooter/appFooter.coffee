@@ -12,12 +12,12 @@ Template.appFooter.helpers
 
 Template.appFooter.events
 
-  "click .view-mode": ->
-
-    Session.set 'viewMode', true
-
-    if(Meteor.user())
-      Router.go 'showPost', { _id: Router.current().params._id }
+  "click .edit-post": ->
+    # removed set view-mode false
+    if(Session.get("localPost"))
+      FlowRouter.go('showLocal')
+    else
+      FlowRouter.go 'showPost', { _id: FlowRouter.current().params._id }
        
   "click .clear-content-btn": (e) ->
     

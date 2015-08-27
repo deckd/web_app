@@ -1,0 +1,49 @@
+<!-- <template name="mainLayout">
+  {{> sAlert template='dkAlert'}}
+  {{#if currentUser}}
+  <div class="ui sidebar">
+    {{> postsList}}
+  </div>
+  {{/if}}
+<div class="pusher app-container">
+  {{#if editMode}}
+   {{> Template.dynamic template=header }}
+  {{/if}}
+  <div class="main-content {{#if editMode}}editor-layout{{else}}viewer-layout{{/if}}">
+   {{> Template.dynamic template=main }}
+  </div>
+  {{#if editMode}}
+    {{> Template.dynamic template=footer }}
+  {{/if}}
+  </div>
+  {{> googleAnalytics}}
+ </template> -->
+
+<!--  <template name="OldmainLayout">
+   <div class="pusher app-container">
+     {{> Template.dynamic template=header }}
+    <div class="main-content editor-layout">
+    {{> Template.dynamic template=main }}
+  </div>
+    {{> Template.dynamic template=footer }}
+  </div>
+
+  {{> sAlert template='dkAlert'}}
+  {{#if currentUser}}
+  <div class="ui sidebar">
+    {{> postsList}}
+  </div>
+  {{/if}}
+<div class="pusher app-container">
+  {{#if editMode}}
+    {{> appHeader}}
+  {{/if}}
+  <div class="main-content {{#if editMode}}editor-layout{{else}}viewer-layout{{/if}}">
+    {{> yield}} 
+  </div>
+  {{#if editMode}}
+    {{> appFooter}}
+  {{/if}}
+  </div>
+  {{> googleAnalytics}}
+ </template> -->

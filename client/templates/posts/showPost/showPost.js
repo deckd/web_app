@@ -36,9 +36,11 @@ Template.showPost.helpers({
 
 Template.showPost.events({
   "click .edit-post":function(){
-    Session.set("viewMode", false);
-    if(Meteor.user()){
-      // Router.go('editPost', { _id: Router.current().params._id });
+    if(Session.get("localPost")){
+      FlowRouter.go('home');
+    } else {
+
+      // go to edit route w params
     };
   }
 });

@@ -16,6 +16,8 @@
 
 function saveLocalPost() {
   if (Session.get("savingLocalPost")) {
+
+    // replace with a Tracker autorun call - this is currently not even being referenced
     while (Meteor.loggingIn()) {
      // BlazeLayout.render('loading');
      console.log("signing in... ");
@@ -85,9 +87,7 @@ publicRts.route('/show', {
 publicRts.route('/login', {
   name: 'login',
   action: function(){
-    BlazeLayout.render('mainLayout', {
-      main: 'login'
-    });
+    BlazeLayout.render('login');
   }
 });
 

@@ -1,6 +1,6 @@
 Meteor.startup(function () {
 
-
+  // See https://atmospherejs.com/kadira/blaze-layout
   BlazeLayout.setRoot('body');
   $('body').addClass('app-container');
 

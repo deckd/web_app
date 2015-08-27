@@ -103,6 +103,7 @@ ui@1.0.6
 underscore@1.0.3
 url@1.0.4
 useraccounts:core@1.12.3
+useraccounts:flow-routing@1.12.3
 useraccounts:unstyled@1.12.3
 utilities:avatar@0.8.2
 webapp@1.2.0

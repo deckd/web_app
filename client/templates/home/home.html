@@ -1,3 +1,11 @@
 <template name="home">
-homepage
+  {{> sAlert template='dkAlert'}}
+  {{> Template.dynamic template=header }}
+  {{#if currentUser}}
+    My Decks
+  {{else}}
+    {{> postTextarea}}
+  {{/if}}
+  {{> Template.dynamic template=footer}}
+  {{> googleAnalytics}}
 </template>

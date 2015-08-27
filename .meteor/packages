@@ -38,3 +38,4 @@ flemay:less-autoprefixer
 semantic:ui-sidebar
 kadira:flow-router
 kadira:blaze-layout
+useraccounts:flow-routing

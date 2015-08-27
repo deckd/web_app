@@ -1,6 +1,6 @@
 Template.postContent.onRendered(function(){
 
-  Session.set("currentView", Router.current().route.getName());
+  // Session.set("currentView", Router.current().route.getName());
 
   if (Session.get("editingPost")){
       $('#post_content').focus();
@@ -24,7 +24,7 @@ Template.postContent.helpers({
     return !Session.get("viewMode");
   },
   localContent: function(){
-    if(Router.current().route.getName() === 'showPost' || Router.current().route.getName() === 'editPost'){
+    if(FlowRouter.getRouteName() === 'showPost' || FlowRouter.getRouteName() === 'editPost'){
       return false;
     } else {
       return Session.get("localContent");
@@ -67,7 +67,7 @@ Template.postContent.events({
   "click .edit-mode":function(){
     Session.set("viewMode", false);
     if(Meteor.user()){
-      Router.go('editPost', { _id: Router.current().params._id });
+      // Router.go('editPost', { _id: Router.current().params._id });
     };
   },
   "keydown .show-on-shift-return":function(e){

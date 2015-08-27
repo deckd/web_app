@@ -1,5 +1,5 @@
 Meteor.startup(function () {
-  $('body').addClass('app-container');
+  // $('body').addClass('app-container');
 
   Session.setDefault({
     slideContent: "",

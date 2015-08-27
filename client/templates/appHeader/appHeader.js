@@ -32,7 +32,7 @@ Template.appHeader.events({
     // $('.ui.sidebar').sidebar('setting', 'transition', 'overlay').sidebar('toggle');
 
   },
-  'click .modal-login': function(e){
+  'click .modal-login, click .save-to-cloud': function(e){
     e.preventDefault();
     Session.set("savingForLater", true);
     // FlowRouter.go('login');

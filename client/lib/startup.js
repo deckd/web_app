@@ -11,7 +11,8 @@ Meteor.startup(function () {
     viewMode: false,
     editingPost: true,
     postContent: "",
-    viewMode: ""
+    viewMode: "",
+    localPost: false
   });
 
 });

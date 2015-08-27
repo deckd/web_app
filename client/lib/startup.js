@@ -12,7 +12,8 @@ Meteor.startup(function () {
     editingPost: true,
     postContent: "",
     viewMode: "",
-    localPost: false
+    localPost: false,
+    docTitle: DkConstants.TITLE_BLURB
   });
 
 });

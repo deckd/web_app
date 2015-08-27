@@ -1,4 +1,4 @@
-Template.editPost.onRendered(function(){
+Template.editPost.onCreated(function(){
 
   //on home, this template only appears if no currentUser
   if(FlowRouter.getRouteName() === 'home' && !Meteor.userId()){

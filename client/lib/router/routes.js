@@ -1,5 +1,61 @@
+// **** GLOBAL ***
+// FlowRouter.triggers.enter([cb1, cb2]);
 
+  //  function(){
+  //     if (Meteor.userId() || Meteor.loggingIn()) {
+  //       console.log("signed in user");
+  //       saveLocalPost();
+        
+  //       // subscribe to this user's posts
+  //     } else{
+  //      // not needed, just for dev
+  //       console.log("anon user");
+  //     };
+  //   }
+  // ]
 
+function saveLocalPost() {
+  if (Session.get("savingLocalPost")) {
+    while (Meteor.loggingIn()) {
+     // BlazeLayout.render('loading');
+     console.log("signing in... ");
+    }
+  
+    if (Meteor.userId()) {
+       postId = DkPosts.saveLocalPost();
+       Session.set("savingForLater", false);
+       console.log("postId: " + postId);
+       // FlowRouter.redirect('showPost', {_id: postId});
+
+    } else{
+
+      console.log("no user id");
+
+    };
+   
+  } 
+};
+
+//TODO: move this to Dk namespace
+// var createFromLocal = function(){
+
+//   if(Session.get("savingForLater")){
+//     // console.log("saving for later...");
+
+//     if(!Meteor.userId() || Meteor.loggingIn()){
+//       // console.log("signing in...");
+//          this.next();
+
+//       // this.render('loading');
+//     } else {
+//       // console.log("start create from local...");
+//       DkPosts.createFromLocal(); 
+//     };
+//   } else {
+//     this.next();
+//   };
+   
+// };
 
 // **** PUBLIC PAGES ****
 
@@ -12,17 +68,7 @@ var publicRts = FlowRouter.group();
 
 publicRts.route('/', {
   name: 'home',
-  triggersEnter: [
-    function(){
-      if (Meteor.userId()) {
-        console.log("signed in user");
-        // subscribe to this user's posts
-      } else{
-       // not needed, just for dev
-        console.log("anon user");
-      };
-    }
-  ],
+  triggersEnter: [saveLocalPost],
   action: function(){
     BlazeLayout.render('home');
   }
@@ -50,3 +96,17 @@ publicRts.route('/login', {
 var postRoutes = FlowRouter.group({
   prefix: '/posts'
 });
+
+FlowRouter.route('/posts/:_id', {
+  name: 'showPost',
+  subscriptions: function(params){
+    this.register('mypost', Meteor.subscribe('post', params._id));
+  },
+  action: function (params) {
+   
+    console.log("params: " + params);
+    // BlazeLayout.render('showPost', {_id: params._id});
+  }
+});
+
+

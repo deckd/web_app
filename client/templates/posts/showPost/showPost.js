@@ -36,11 +36,12 @@ Template.showPost.helpers({
 
 Template.showPost.events({
   "click .edit-post":function(){
+
+    //TODO: refactor - this is duplicated in appFooter.coffee
     if(Session.get("localPost")){
       FlowRouter.go('home');
     } else {
-
-      // go to edit route w params
+      //      FlowRouter.go 'showPost', { _id: FlowRouter.current().params._id }
     };
   }
 });

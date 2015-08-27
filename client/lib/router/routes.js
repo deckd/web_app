@@ -21,10 +21,7 @@ publicRts.route('/', {
     }
   ],
   action: function(){
-    // in app header, handle display for anon or current user, same with footer
-    // same in home? conditional editPost vs myPosts
     BlazeLayout.render('home');
-    console.log("We're on the public homepage");
   }
 });
 
@@ -32,7 +29,6 @@ publicRts.route('/show', {
   name: 'showLocal',
   action: function(){
     BlazeLayout.render('showLocal');
-    console.log("We're on the public show view");
   }
 });
 

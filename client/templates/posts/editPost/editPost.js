@@ -73,9 +73,9 @@ Template.editPost.events({
   },
   "keydown .show-on-shift-return":function(e){
     e.preventDefault;
-    if(Session.get("localContent") !== ""){
+    if(Session.get("localPost")){
       if (e.keyCode === 13 && e.shiftKey){
-        Session.set("viewMode", true);
+        FlowRouter.go('showLocal');
         return false;
       };
     };

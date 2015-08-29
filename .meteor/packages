@@ -37,3 +37,4 @@ flemay:less-autoprefixer
 semantic:ui-sidebar
 useraccounts:flow-routing
 accounts-ui-unstyled
+iron:router

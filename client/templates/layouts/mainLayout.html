@@ -1,5 +1,12 @@
-<!-- <template name="mainLayout">
+<template name="mainLayout">
   {{> sAlert template='dkAlert'}}
+  {{> appHeader}}
+  {{> yield}}
+  {{> appFooter}}
+  {{> googleAnalytics}}
+</template>
+
+ <template name="OldmainLayout">
   {{#if currentUser}}
   <div class="ui sidebar">
     {{> postsList}}
@@ -17,9 +24,7 @@
   {{/if}}
   </div>
   {{> googleAnalytics}}
- </template> -->
 
-<!--  <template name="OldmainLayout">
    <div class="pusher app-container">
      {{> Template.dynamic template=header }}
     <div class="main-content editor-layout">
@@ -46,4 +51,4 @@
   {{/if}}
   </div>
   {{> googleAnalytics}}
- </template> -->
+ </template>

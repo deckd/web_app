@@ -1,7 +1,7 @@
 Template.editPost.onCreated(function(){
 
   //on home, this template only appears if no currentUser
-  if(FlowRouter.getRouteName() === 'home' && !Meteor.userId()){
+  if(Router.current().route.getName() === 'home' && !Meteor.userId()){
     Session.set("localPost", true);
   }
   //   return true;

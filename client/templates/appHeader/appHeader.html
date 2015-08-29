@@ -15,27 +15,36 @@
       &nbsp;
     </div>
     <div class="right-section">
-      {{#if currentUser}}
-        <div class="dropdown-container">
-          {{#dropdownTrigger name="user_nav_dropdown"}}
-            <button class="btn-unstyled">
-              {{#with currentUser}}
-                {{> avatar user=this shape="circle"}}
-              {{/with}}
-            </button>
-          {{/dropdownTrigger}}
-          {{#dropdown name="user_nav_dropdown"}}
-            <button class="unstyled logout">
-              Sign Out
-            </button>
-          {{/dropdown}}
-        </div>
-        {{else}}
-          <button type="button" class="icon-button medium-button modal-login" title="Sign in" alt="Sign In">
-            <i class="fa fa-sign-in"></i>
-          </button>        
-      {{/if}}
+      {{> loginButtons align="right"}}
     </div>
   </div>
+</template>
+
+<template name="foo">
+{{#if currentUser}}
+    <div class="dropdown-container">
+      {{#dropdownTrigger name="user_nav_dropdown"}}
+        <button class="btn-unstyled">
+          {{#with currentUser}}
+            {{> avatar user=this shape="circle"}}
+          {{/with}}
+        </button>
+      {{/dropdownTrigger}}
+      {{#dropdown name="user_nav_dropdown"}}
+        <button class="unstyled logout">
+          Sign Out
+        </button>
+      {{/dropdown}}
+    </div>
+    {{else}}
+      <button type="button" class="icon-button medium-button modal-login" title="Sign in" alt="Sign In">
+        <i class="fa fa-sign-in"></i>
+      </button>        
+  {{/if}}
+
+  {{#if loggingIn}}
+  Logging in...
+  {{else}}
+  {{/if}}
 </template>
 

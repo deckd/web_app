@@ -31,7 +31,6 @@ accounts-google
 lookback:dropdowns
 utilities:avatar
 service-configuration
-accounts-ui
 aldeed:template-extension
 underscore
 flemay:less-autoprefixer
@@ -39,3 +38,4 @@ semantic:ui-sidebar
 kadira:flow-router
 kadira:blaze-layout
 useraccounts:flow-routing
+accounts-ui-unstyled

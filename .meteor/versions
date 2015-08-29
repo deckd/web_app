@@ -19,7 +19,6 @@ boilerplate-generator@1.0.3
 callback-hook@1.0.3
 check@1.0.5
 coffeescript@1.0.6
-cosmos:browserify@0.5.0
 dburles:mongo-collection-instances@0.3.4
 ddp@1.1.0
 deps@1.0.7
@@ -57,8 +56,6 @@ juliancwirko:s-alert@2.4.2
 juliancwirko:s-alert-bouncyflip@1.1.4
 juliancwirko:s-alert-slide@1.1.4
 juliancwirko:s-alert-stackslide@1.1.4
-kadira:blaze-layout@2.0.1
-kadira:flow-router@2.4.0
 lai:collection-extensions@0.1.4
 launch-screen@1.0.2
 livedata@1.0.13
@@ -98,7 +95,6 @@ semantic:ui-sidebar@2.0.8
 service-configuration@1.0.4
 session@1.1.0
 sha@1.0.3
-softwarerero:accounts-t9n@1.0.9
 spacebars@1.0.6
 spacebars-compiler@1.0.6
 srp@1.0.3
@@ -108,9 +104,6 @@ u2622:persistent-session@0.4.1
 ui@1.0.6
 underscore@1.0.3
 url@1.0.4
-useraccounts:core@1.12.3
-useraccounts:flow-routing@1.12.3
-useraccounts:unstyled@1.12.3
 utilities:avatar@0.8.2
 webapp@1.2.0
 webapp-hashing@1.0.3

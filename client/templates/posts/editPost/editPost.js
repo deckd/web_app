@@ -53,7 +53,7 @@ Template.editPost.events({
     DkHelpers.setDocTitle(postContent);
 
     var postAttributes = {
-      postId: FlowRouter.current().params._id,
+      postId: Router.current().params._id,
       content: postContent,
       title: DkHelpers.getPostTitle(postContent)
     };
@@ -75,7 +75,7 @@ Template.editPost.events({
     e.preventDefault;
     if(Session.get("localPost")){
       if (e.keyCode === 13 && e.shiftKey){
-        FlowRouter.go('showLocal');
+        Router.go('showLocal');
         return false;
       };
     };

@@ -2,7 +2,7 @@ Template.showPost.onCreated(function(){
 
   document.title = Session.get("docTitle");
 
-  if(FlowRouter.getRouteName() === 'showLocal' && !Meteor.userId()){
+  if(Router.current().route.getName() === 'showLocal' && !Meteor.userId()){
     Session.set("localPost", true);
   }
 
@@ -39,7 +39,7 @@ Template.showPost.events({
 
     //TODO: refactor - this is duplicated in appFooter.coffee
     if(Session.get("localPost")){
-      FlowRouter.go('home');
+      Router.go('home');
     } else {
       //      FlowRouter.go 'showPost', { _id: FlowRouter.current().params._id }
     };

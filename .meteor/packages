@@ -33,6 +33,6 @@ service-configuration
 aldeed:template-extension
 underscore
 flemay:less-autoprefixer
-accounts-ui-unstyled
 iron:router
 twbs:bootstrap
+ian:accounts-ui-bootstrap-3

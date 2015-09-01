@@ -1,0 +1,7 @@
+<template name="decksList">
+  <ul>
+  {{#each decks}}
+  <li>{{#linkTo route='showPost'}}{{title}}{{/linkTo}}</li>
+  {{/each}}
+  </ul>
+</template>

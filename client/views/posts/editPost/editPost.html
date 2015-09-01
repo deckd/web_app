@@ -3,20 +3,3 @@
    <textarea id="post_content" name="slide" class="editor clear-content show-on-shift-return {{#if localPost}}local-save{{else}}db-save{{/if}}" placeholder="Write something...">{{#if localPost}}{{localContent}}{{else}}{{content}}{{/if}}</textarea>
 </div>
 </template>
-
-
-<!-- <template name="OldeditPost">
- {{> sAlert template='dkAlert'}}
- {{> Template.dynamic template=header }}
-  <div class="main-content editor-layout">
-   <textarea id="post_content" name="slide" class="editor clear-content show-on-shift-return {{#if localSave}}local-save{{else}}db-save{{/if}}" placeholder="Write something...">{{#if localContent}}{{localContent}}{{else}}{{content}}{{/if}}</textarea>
-</div>
-{{> Template.dynamic template=footer }}
-{{> googleAnalytics}}
-</template>
- -->
-<!-- <template name="postTextarea">
-  <div class="main-content editor-layout">
-   <textarea id="post_content" name="slide" class="editor clear-content show-on-shift-return {{#if localSave}}local-save{{else}}db-save{{/if}}" placeholder="Write something...">{{#if localContent}}{{localContent}}{{else}}{{content}}{{/if}}</textarea>
-</div>
-</template> -->

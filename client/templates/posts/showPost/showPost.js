@@ -38,10 +38,10 @@ Template.showPost.events({
   "click .edit-post":function(){
 
     //TODO: refactor - this is duplicated in appFooter.coffee
-    if(Session.get("localPost")){
+    if(Router.current().route.getName() === 'showLocal'){
       Router.go('home');
     } else {
-      //      FlowRouter.go 'showPost', { _id: FlowRouter.current().params._id }
+      Router.go('editPost', { _id: Router.current().params._id });
     };
   }
 });

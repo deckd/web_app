@@ -4,25 +4,7 @@ Template.editPost.onCreated(function(){
   if(Router.current().route.getName() === 'home' && !Meteor.userId()){
     Session.set("localPost", true);
   }
-  //   return true;
-  // } else {
-  //   return false;
-  //   // return Session.get("localContent");
-  // }
 
-  // Session.set("currentView", Router.current().route.getName());
-
-  // if (Session.get("editingPost")){
-  //     $('#post_content').focus();
-  // }
-  // if(Session.get("saveForLater")){
-  //   var newPostAlert = sAlert.info('Deck saved for later.', {
-  //     effect: 'stackslide',
-  //     position: 'bottom',
-  //     timeout: 3000
-  //   });
-  //   Session.set("saveForLater", false);
-  // }
 });
 
 Template.editPost.onDestroyed(function(){
@@ -81,4 +63,24 @@ Template.editPost.events({
     };
   } 
 });
+
+  //   return true;
+  // } else {
+  //   return false;
+  //   // return Session.get("localContent");
+  // }
+
+  // Session.set("currentView", Router.current().route.getName());
+
+  // if (Session.get("editingPost")){
+  //     $('#post_content').focus();
+  // }
+  // if(Session.get("saveForLater")){
+  //   var newPostAlert = sAlert.info('Deck saved for later.', {
+  //     effect: 'stackslide',
+  //     position: 'bottom',
+  //     timeout: 3000
+  //   });
+  //   Session.set("saveForLater", false);
+  // }
 

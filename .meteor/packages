@@ -33,6 +33,5 @@ service-configuration
 aldeed:template-extension
 underscore
 flemay:less-autoprefixer
-semantic:ui-sidebar
 accounts-ui-unstyled
 iron:router

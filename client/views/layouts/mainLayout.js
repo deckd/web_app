@@ -1,12 +1,21 @@
-Template.mainLayout.onRendered(function(){
+Template.mainLayout.helpers({
 
-  // if (Session.get("docTitle") === "" || Session.get("docTitle") == undefined) {
-  //   Session.setPersistent("docTitle", DkConstants.TITLE_BLURB)
-  // };
-
-  // document.title = Session.get("docTitle");
+  editMode: function(){
+    return Session.get("editMode");
+  }
 
 });
+
+
+// Template.mainLayout.onRendered(function(){
+
+//   // if (Session.get("docTitle") === "" || Session.get("docTitle") == undefined) {
+//   //   Session.setPersistent("docTitle", DkConstants.TITLE_BLURB)
+//   // };
+
+//   // document.title = Session.get("docTitle");
+
+// });
 
 // Template.mainLayout.onCreated(function(){
 
@@ -17,11 +26,3 @@ Template.mainLayout.onRendered(function(){
 //     document.title = Session.get("docTitle")
 
 // });  
-  
-Template.mainLayout.helpers({
-
-  editMode: function(){
-    return Session.get("editMode");
-  }
-
-});

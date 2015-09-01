@@ -1,10 +1,6 @@
 Template.appFooter.helpers
   editMode: ->
     return !Session.get("viewMode")
-    # if Session.get("localContent") == ""
-    #   return false
-    # else
-    #   return true
 
   helpText: ->
     if Session.get("localContent") == ""
@@ -13,11 +9,12 @@ Template.appFooter.helpers
 Template.appFooter.events
 
   "click .edit-post": ->
-    # removed set view-mode false
+    # TODO: refactor - this check for local vs post is duplicated in editPost and showPost
+    Session.set "editMode", true
     if(Session.get("localPost"))
-      FlowRouter.go('showLocal')
+      Router.go('showLocal')
     else
-      FlowRouter.go 'showPost', { _id: FlowRouter.current().params._id }
+      Router.go 'showPost', { _id: Router.current().params._id }
        
   "click .clear-content-btn": (e) ->
     
@@ -28,4 +25,4 @@ Template.appFooter.events
     clearContentAlert = sAlert.info('Content cleared.', {effect: 'stackslide', position: 'bottom', timeout: 4500})
     Session.set "clearContentAlert", clearContentAlert
     DkHelpers.setDocTitle("")
-    Session.set "editingPost", true
+    Session.set "editMode", true

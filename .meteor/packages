@@ -25,7 +25,6 @@ ongoworks:security
 msavin:mongol
 sacha:spin
 anti:modals
-useraccounts:unstyled
 accounts-facebook
 accounts-google
 lookback:dropdowns
@@ -35,5 +34,5 @@ aldeed:template-extension
 underscore
 flemay:less-autoprefixer
 semantic:ui-sidebar
-useraccounts:flow-routing
 accounts-ui-unstyled
+iron:router

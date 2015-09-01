@@ -1,11 +1,7 @@
 <template name="home">
-  {{> sAlert template='dkAlert'}}
-  {{> appHeader }}
   {{#if currentUser}}
     My Decks
   {{else}}
     {{> editPost}}
   {{/if}}
-  {{> appFooter }}
-  {{> googleAnalytics}}
 </template>

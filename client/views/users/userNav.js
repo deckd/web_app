@@ -5,7 +5,7 @@ Template.userNav.events({
       if(error){
         alert(error);
       }
-       FlowRouter.go('login');
+       Router.go('login');
     });
    
   }

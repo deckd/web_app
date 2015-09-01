@@ -1,28 +1,10 @@
 Template.editPost.onCreated(function(){
 
   //on home, this template only appears if no currentUser
-  if(FlowRouter.getRouteName() === 'home' && !Meteor.userId()){
+  if(Router.current().route.getName() === 'home' && !Meteor.userId()){
     Session.set("localPost", true);
   }
-  //   return true;
-  // } else {
-  //   return false;
-  //   // return Session.get("localContent");
-  // }
 
-  // Session.set("currentView", Router.current().route.getName());
-
-  // if (Session.get("editingPost")){
-  //     $('#post_content').focus();
-  // }
-  // if(Session.get("saveForLater")){
-  //   var newPostAlert = sAlert.info('Deck saved for later.', {
-  //     effect: 'stackslide',
-  //     position: 'bottom',
-  //     timeout: 3000
-  //   });
-  //   Session.set("saveForLater", false);
-  // }
 });
 
 Template.editPost.onDestroyed(function(){
@@ -53,7 +35,7 @@ Template.editPost.events({
     DkHelpers.setDocTitle(postContent);
 
     var postAttributes = {
-      postId: FlowRouter.current().params._id,
+      postId: Router.current().params._id,
       content: postContent,
       title: DkHelpers.getPostTitle(postContent)
     };
@@ -65,20 +47,41 @@ Template.editPost.events({
       };
     });
   },
-  "click .edit-mode":function(){
-    Session.set("viewMode", false);
-    if(Meteor.user()){
-      // Router.go('editPost', { _id: Router.current().params._id });
-    };
-  },
+  // "click .edit-mode":function(){
+  //   Session.set("viewMode", false);
+  //   if(Meteor.user()){
+  //     // Router.go('editPost', { _id: Router.current().params._id });
+  //   };
+  // },
   "keydown .show-on-shift-return":function(e){
     e.preventDefault;
     if(Session.get("localPost")){
       if (e.keyCode === 13 && e.shiftKey){
-        FlowRouter.go('showLocal');
+        Session.set("editMode", false);
+        Router.go('showLocal');
         return false;
       };
     };
   } 
 });
+
+  //   return true;
+  // } else {
+  //   return false;
+  //   // return Session.get("localContent");
+  // }
+
+  // Session.set("currentView", Router.current().route.getName());
+
+  // if (Session.get("editingPost")){
+  //     $('#post_content').focus();
+  // }
+  // if(Session.get("saveForLater")){
+  //   var newPostAlert = sAlert.info('Deck saved for later.', {
+  //     effect: 'stackslide',
+  //     position: 'bottom',
+  //     timeout: 3000
+  //   });
+  //   Session.set("saveForLater", false);
+  // }
 

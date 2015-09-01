@@ -15,12 +15,7 @@
     </div>
     <div class="middle-section align-center">
       {{#if editMode}}
-        <button type="button" class="icon-button medium-button edit-post with-help" title="Switch to view mode" alt="Switch to view mode">
-         <i class="fa fa-youtube-play fa-3x"></i>
-        </button>
-        {{#if isDesktop}}
-          <p class="help-text small-text no-padding no-margin">(Or use Shift + Return)</p>
-        {{/if}}
+         {{> showDeckBtn}}
       {{else}}
         <span class="help-text">{{{helpText}}}</span>
       {{/if}}

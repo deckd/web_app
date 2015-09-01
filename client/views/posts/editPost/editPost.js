@@ -47,16 +47,17 @@ Template.editPost.events({
       };
     });
   },
-  "click .edit-mode":function(){
-    Session.set("viewMode", false);
-    if(Meteor.user()){
-      // Router.go('editPost', { _id: Router.current().params._id });
-    };
-  },
+  // "click .edit-mode":function(){
+  //   Session.set("viewMode", false);
+  //   if(Meteor.user()){
+  //     // Router.go('editPost', { _id: Router.current().params._id });
+  //   };
+  // },
   "keydown .show-on-shift-return":function(e){
     e.preventDefault;
     if(Session.get("localPost")){
       if (e.keyCode === 13 && e.shiftKey){
+        Session.set("editMode", false);
         Router.go('showLocal');
         return false;
       };

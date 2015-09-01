@@ -10,6 +10,7 @@ Template.appFooter.events
 
   "click .edit-post": ->
     # TODO: refactor - this check for local vs post is duplicated in editPost and showPost
+    Session.set "editMode", true
     if(Session.get("localPost"))
       Router.go('showLocal')
     else
@@ -24,4 +25,4 @@ Template.appFooter.events
     clearContentAlert = sAlert.info('Content cleared.', {effect: 'stackslide', position: 'bottom', timeout: 4500})
     Session.set "clearContentAlert", clearContentAlert
     DkHelpers.setDocTitle("")
-    Session.set "editingPost", true
+    Session.set "editMode", true

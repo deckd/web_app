@@ -35,3 +35,4 @@ underscore
 flemay:less-autoprefixer
 accounts-ui-unstyled
 iron:router
+twbs:bootstrap

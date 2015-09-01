@@ -55,15 +55,24 @@ Template.editPost.events({
   // },
   "keydown .show-on-shift-return":function(e){
     e.preventDefault;
-    if(Session.get("localPost")){
-      if (e.keyCode === 13 && e.shiftKey){
-        Session.set("editMode", false);
+
+    if (e.keyCode === 13 && e.shiftKey){
+      Session.set("editMode", false);
+
+      if(Session.get("localPost")){
         Router.go('showLocal');
-        return false;
+      } else {
+        Router.go('showPost', { _id: Router.current().params._id });
       };
+      
+      return false;
     };
   } 
 });
+
+  // # TODO: refactor - this check for local vs post is duplicated in editPost and showPost
+    Session.set("editMode", false);
+    
 
   //   return true;
   // } else {

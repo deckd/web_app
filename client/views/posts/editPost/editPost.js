@@ -13,7 +13,6 @@ Template.editPost.onDestroyed(function(){
 
 Template.editPost.helpers({
 
-  //TODO: find a way to eliminate need for both localPost and localContent
   localPost: function(){
     return Session.get("localPost");
   },
@@ -34,7 +33,7 @@ Template.editPost.events({
   "input .db-save": function(e){
     var postContent = e.target.value;
     DkPosts.checkIfEmpty(content);
-    
+
     DkHelpers.setDocTitle(postContent);
 
     var postAttributes = {
@@ -50,18 +49,13 @@ Template.editPost.events({
       };
     });
   },
-  // "click .edit-mode":function(){
-  //   Session.set("viewMode", false);
-  //   if(Meteor.user()){
-  //     // Router.go('editPost', { _id: Router.current().params._id });
-  //   };
-  // },
   "keydown .show-on-shift-return":function(e){
-    e.preventDefault;
+     e.preventDefault;
 
-    if (e.keyCode === 13 && e.shiftKey){
-      Session.set("editMode", false);
+     if (e.keyCode === 13 && e.shiftKey){
 
+       // TODO: refactor - this is duplicated in multiple locations
+      
       if(Session.get("localPost")){
         Router.go('showLocal');
       } else {
@@ -72,28 +66,3 @@ Template.editPost.events({
     };
   } 
 });
-
-  // # TODO: refactor - this check for local vs post is duplicated in editPost and showPost
-    Session.set("editMode", false);
-    
-
-  //   return true;
-  // } else {
-  //   return false;
-  //   // return Session.get("localContent");
-  // }
-
-  // Session.set("currentView", Router.current().route.getName());
-
-  // if (Session.get("editingPost")){
-  //     $('#post_content').focus();
-  // }
-  // if(Session.get("saveForLater")){
-  //   var newPostAlert = sAlert.info('Deck saved for later.', {
-  //     effect: 'stackslide',
-  //     position: 'bottom',
-  //     timeout: 3000
-  //   });
-  //   Session.set("saveForLater", false);
-  // }
-

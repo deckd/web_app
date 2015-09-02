@@ -25,7 +25,6 @@ Template.showPost.events({
   "click .edit-post":function(){
 
     //TODO: refactor - this is duplicated in appFooter.coffee
-    Session.set("editMode", true);
     if(Router.current().route.getName() === 'showLocal'){
       Router.go('home');
     } else {
@@ -33,17 +32,3 @@ Template.showPost.events({
     };
   }
 });
-
-  // Session.set("currentView", Router.current().route.getName());
-
-  // if (Session.get("editingPost")){
-  //     $('#post_content').focus();
-  // }
-  // if(Session.get("saveForLater")){
-  //   var newPostAlert = sAlert.info('Deck saved for later.', {
-  //     effect: 'stackslide',
-  //     position: 'bottom',
-  //     timeout: 3000
-  //   });
-  //   Session.set("saveForLater", false);
-  // }

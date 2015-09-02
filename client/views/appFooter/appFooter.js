@@ -5,18 +5,13 @@ Template.appFooter.helpers({
   },
 
   helpText: function(){
-    //TODO: this needs to work for db also
-    if (Session.get("localContent") === "") {
+    if (!Session.get("deckHasContent")) {
       return DkConstants.FORMATTING_HELP;
     };
   },
 
   deckHasContent: function(){
-    if (Session.get("editMode") && (Session.get("localContent") !== "")) {
-      return true;
-    } else {
-      return false;
-    };
+   return Session.get("deckHasContent");
   }
 
 });

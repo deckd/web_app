@@ -26,12 +26,15 @@ Template.editPost.events({
 
   "input .local-save": function(e){
     var content = e.target.value;
+    DkPosts.checkIfEmpty(content);
     Session.setPersistent("localContent", content);
     DkHelpers.setDocTitle(content);
   },
   
   "input .db-save": function(e){
     var postContent = e.target.value;
+    DkPosts.checkIfEmpty(content);
+    
     DkHelpers.setDocTitle(postContent);
 
     var postAttributes = {

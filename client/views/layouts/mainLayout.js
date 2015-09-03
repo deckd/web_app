@@ -1,14 +1,10 @@
 Template.mainLayout.onCreated(function(){
-   document.title = Session.get("docTitle");
-   // $("#wrapper").toggleClass("toggled");
 
+    if (Session.get("docTitle") === "" || Session.get("docTitle") == undefined) {
+      Session.setPersistent("docTitle", DkConstants.TITLE_BLURB)
+    };
  
-
-    // if (Session.get("docTitle") === "" || Session.get("docTitle") == undefined) {
-    //   Session.setPersistent("docTitle", DkConstants.TITLE_BLURB)
-    // };
- 
-    // document.title = Session.get("docTitle")
+    document.title = Session.get("docTitle")
 
 });  
 

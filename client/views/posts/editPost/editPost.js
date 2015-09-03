@@ -1,8 +1,17 @@
 Template.editPost.onCreated(function(){
 
-  //on home, this template only appears if no currentUser
-  if(Router.current().route.getName() === 'home' && !Meteor.userId()){
+  //Display locally stored content if user is anonymous
+  if(!Meteor.userId()){
     Session.set("localPost", true);
+  }
+
+});
+
+Template.editPost.onRendered(function(){
+
+  if (Session.get("startSaveToAcct")){
+    sAlert.info('The deck was saved to your account.', {effect: 'stackslide', position: 'bottom', timeout: 4500});
+    Session.set("startSaveToAcct", false);
   }
 
 });
@@ -55,7 +64,7 @@ Template.editPost.events({
      if (e.keyCode === 13 && e.shiftKey){
 
        // TODO: refactor - this is duplicated in multiple locations
-      
+
       if(Session.get("localPost")){
         Router.go('showLocal');
       } else {

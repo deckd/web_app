@@ -1,5 +1,10 @@
 <template name="editPost">
   <div class="main-content editor-layout">
-   <textarea id="post_content" name="slide" class="editor clear-content show-on-shift-return {{#if localPost}}local-save{{else}}db-save{{/if}}" placeholder="Write something...">{{#if localPost}}{{localContent}}{{else}}{{content}}{{/if}}</textarea>
-</div>
+    <textarea id="post_content" name="slide" class="editor clear-content show-on-shift-return
+      {{#if localPost}}
+        local-save
+      {{else}}
+        db-save
+      {{/if}}" placeholder="Write something...">{{#if localPost}}{{localContent}}{{else}}{{content}}{{/if}}</textarea>
+  </div>
 </template>

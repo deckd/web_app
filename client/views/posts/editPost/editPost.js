@@ -47,7 +47,7 @@ Template.editPost.events({
   
   "input .db-save": function(e){
     var postContent = e.target.value;
-    DkPosts.checkIfEmpty(content);
+    DkPosts.checkIfEmpty(postContent);
 
     DkHelpers.setDocTitle(postContent);
 

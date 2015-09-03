@@ -42,13 +42,17 @@ Template.appHeader.events({
     // console.log(overlay);
     // Router.go('save-for-later');
   },
+  "click .new-deck": function (e) {
+    e.preventDefault();
+    DkPosts.createPost();
+  },
   "click .logout": function (e,t) {
     e.preventDefault();
     Meteor.logout(function(error){
       if(error){
         alert(error);
       }
-       FlowRouter.go('login');
+       Router.go('login');
     });
   }
 

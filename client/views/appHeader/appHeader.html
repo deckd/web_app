@@ -6,11 +6,17 @@
         <i class="fa fa-bars"></i>
       </button>
       {{/if}}
+      {{#if currentUser}}
+        <button type="button" class="icon-button medium-button new-deck" title="New Deck." alt="New Deck.">
+        <i class="fa fa-plus-square"></i> 
+      </button>
+      {{/if}}
       {{#if saveMsg}}
        <button type="button" class="icon-button medium-button save-to-cloud" title="Save to the cloud." alt="Save to the cloud.">
         <i class="fa fa-cloud-upload"></i> (Save to the cloud.)
       </button>
       {{/if}}
+
     </div>
     <div class="middle-section align-center">
       &nbsp;

@@ -1,6 +1,6 @@
 Template.appHeader.helpers({
   saveMsg: function(){
-    var currentView = FlowRouter.getRouteName();
+    var currentView = Router.current().route.getName();
     var localSaveMsg = DkConstants.LOCAL_SAVE_MSG;
 
     // Assumes that authenticated users will always be redirected to a id-based post

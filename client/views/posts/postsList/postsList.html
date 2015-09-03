@@ -1,22 +1,19 @@
 <template name="postsList">
-foo
-  {{#with posts}}
   <ul class="item-list clear-both">
-      {{#each posts}}
+      {{#each this}}
       <li>
       <div class="options"> <button class="delete icon-button">
           <i class="fa fa-times fa"></i>
         </button>
         </div>
         <div class="list-item with-options">
-          <a class="header show-post" href="{{pathFor 'show_post'}}">
+          <a class="header show-post" href="{{pathFor 'showPost'}}">
           <h2 class="truncate-text">{{title}}</h2>
           </a>
           </div>
       </li>
     {{/each}}
   </ul>
-  {{/with}}
    
 <!--        <p>Looks like you don't have any posts <i class="fa fa-frown-o"></i></p>
        <p>

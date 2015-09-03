@@ -12,6 +12,18 @@ Template.mainLayout.helpers({
 
   editMode: function(){
     return Session.get("editMode");
+  },
+  showSideBar: function(){
+
+    if (Meteor.userId()) {
+      if(Router.current().route.getName() === 'home'){
+        return false;
+      } else {
+        return true;
+      };
+    } else {
+      return false;
+    };
   }
 
 });

@@ -1,4 +1,5 @@
 Template.mainLayout.onCreated(function(){
+   document.title = Session.get("docTitle");
    // $("#wrapper").toggleClass("toggled");
 
  

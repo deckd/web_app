@@ -7,8 +7,8 @@ Meteor.startup(function () {
   Session.setDefault({
     slideContent: "",
     deckHasContent: false,
-    saveForLaterLink: false,
-    savingForLater: false,
+    startSaveToAcct: false,
+    savingToAcct: false,
     viewMode: false,
     editingPost: true,
     postContent: "",

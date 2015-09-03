@@ -9,9 +9,12 @@ Template.editPost.onCreated(function(){
 
 Template.editPost.onRendered(function(){
 
-  if (Session.get("startSaveToAcct")){
-    sAlert.info('The deck was saved to your account.', {effect: 'stackslide', position: 'bottom', timeout: 4500});
-    Session.set("startSaveToAcct", false);
+  if (Session.get("newPostFromLocal")){
+    var newPostMessage = "The deck '" + Session.get("newPostTitle") + "' was saved to your account.";
+    sAlert.info(newPostMessage, {effect: 'stackslide', position: 'bottom', timeout: 4500});
+
+    Session.set("newPostTitle","");
+    Session.set("newPostFromLocal", false);
   }
 
 });
@@ -27,6 +30,9 @@ Template.editPost.helpers({
   },
   localContent: function(){
     return Session.get("localContent");
+  },
+  postTitle: function(){
+    return this.title;
   }
 });
 

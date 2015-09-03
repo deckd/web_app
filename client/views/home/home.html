@@ -1,6 +1,7 @@
 <template name="home">
   {{#if currentUser}}
-   (display most recently viewed deck, for this session, else new deck if none found)
+    <h1>My Decks</h1>
+    {{> postsList}}
   {{else}}
     {{> editPost}}
   {{/if}}

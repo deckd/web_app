@@ -1,11 +1,12 @@
 <template name="appHeader">
   <div class="app-header">
     <div class="left-section">
-    {{#if currentUser}}
+    {{#if showSideBar}}
       <button type="button" class="icon-button medium-button toggle-sidebar" title="View menu" alt="View menu">
         <i class="fa fa-bars"></i>
       </button>
-      {{else}}
+      {{/if}}
+      {{#if saveMsg}}
        <button type="button" class="icon-button medium-button save-to-cloud" title="Save to the cloud." alt="Save to the cloud.">
         <i class="fa fa-cloud-upload"></i> (Save to the cloud.)
       </button>

@@ -19,3 +19,4 @@ Template.editSlide.events
   "keydown .shift-return": (e) ->
     if (e.keyCode == 13 && e.shiftKey)
       Session.set("editingSlide", false)
+      return false

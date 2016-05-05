@@ -1,0 +1,23 @@
+{
+  "name": "deckd_app",
+  "version": "1.0.0",
+  "description": "- A tool for quickly posting info for a group, such as at an event, when you need to share info about wifi, hashtags, etc. - Content is persisted locally only, so no need for authentication. - Use [markdown](http://daringfireball.net/projects/markdown/syntax) for basic formatting. - Clear content with a (reset) \"trash\" button. - Try it out at [deckd.co](http://deckd.co).",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "deploy": "DEPLOY_HOSTNAME=galaxy.meteor.com meteor deploy deckd.co --settings settings.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deckd/web_app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deckd/web_app/issues"
+  },
+  "homepage": "https://github.com/deckd/web_app#readme"
+}
